@@ -1,0 +1,6 @@
+{
+  "name": "微光星軌 · 紫微九星心靈陪伴手記",
+  "description": "基於紫微斗數星盤與日本九星氣學的現代命理分析系統。用親切溫厚、療癒文青的筆觸，傾聽並陪伴你遇見更好的自己。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
