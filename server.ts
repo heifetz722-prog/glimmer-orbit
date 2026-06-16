@@ -274,37 +274,37 @@ app.post("/api/fortune/calculate", async (req, res) => {
           description: "星曜微光能量分數，範圍為 1 到 100 之間。由本命九星、紫微宮位等綜合評估得出。"
         },
         lifeHarmonyGuide: {
-          type: Type.STRING,
-          description: "最強人生中和指南報告。這是一份極度精簡一目了然的統合平衡中和方案。包含：1. 能量中和主軸；2. 情緒/生涯/情感三維中和心法；3. 沉潛充能提醒；4. 極簡中和實踐開運「方案 A」與「方案 B」的極簡說明。內容務必富有文學質感，絕不過多贅述，直指靈魂！"
-        },
-        personality: {
-          type: Type.STRING,
-          description: "深度性格天賦、盲點與溫和溫柔的心理旅伴式剖析。字句溫暖，繁體中文白話文。"
-        },
-        career: {
-          type: Type.STRING,
-          description: "生涯與創造力發展指南、適合行業、如何發揮優勢. 字句必須通俗、真誠，絕不過分浮誇吹捧，且結尾必須提供貼心好施行的「生涯方案 A」與「生涯方案 B」。"
-        },
-        love: {
-          type: Type.STRING,
-          description: "情感溫和相遇的運勢、親密交流心態調整。字句柔和溫存，結尾必須提供浪漫生活的「情感方案 A」與「情感方案 B」。"
-        },
-        wealth: {
-          type: Type.STRING,
-          description: "物質與豐盛流動、如何固守財富的安全感、放寬焦慮心法。絕對不能有暴富口吻。結尾必須提供「物質方案 A」與「物質方案 B」。"
-        },
-        health: {
-          type: Type.STRING,
-          description: "日常起居節奏、身體舒緩小調配。切記絕不能進行疾病診治或開藥。僅提供作息、睡眠、泡腳消焦慮放鬆及生活習慣引導（如多喝溫開水）。且最後必須明確附有醫療免責宣告。"
-        },
-        lifeGuidance: {
-          type: Type.STRING,
-          description: "日常小開運指引、色彩/方位/吉祥物件搭配。白話條理清晰，繁體中文。"
-        },
-        currentYearFortune: {
-          type: Type.STRING,
-          description: "2026歲月流轉流年運勢詳解。指出這是發揮才華還是修煉沉潛。字句溫和正向，絕對不能有恐嚇性血光用字，且結尾必須提供面對 2026 年的「流年方案 A」與「流年方案 B」。"
-        }
+      type: Type.STRING,
+      description: "最強人生中和指南報告。這是一份極度精簡一目了然的統合平衡中和方案。請以一段溫柔連貫的散文呈現，給予能量、情緒與沉潛充電的建議。絕對禁止使用條列式、編號或方案A/B的格式。"
+    },
+    personality: {
+      type: Type.STRING,
+      description: "深度性格天賦、盲點與溫和溫柔的心理陪伴式剖析。字句溫暖，繁體中文白話文。"
+    },
+    career: {
+      type: Type.STRING,
+      description: "生涯與創造力發展指南、適合行業、如何發揮優勢。字句必須通俗、真誠，絕不過分浮誇吹捧。請用像朋友般溫暖的口吻給予生涯建議，將建議自然融入段落中，絕對禁止列出「方案 A」與「方案 B」。"
+    },
+    love: {
+      type: Type.STRING,
+      description: "情感溫和相遇的運勢、親密交流心態調整。字句柔和溫存。請以感性流暢的文字提供浪漫生活建議，絕對禁止使用條列式或「方案 A/B」。"
+    },
+    wealth: {
+      type: Type.STRING,
+      description: "物質與豐盛流動、如何固守財富的安全感、放寬焦慮心法。絕對不能有暴富口吻。請以安定的語氣給予理財與心靈富足的建議，自然融入段落，禁止出現「方案 A/B」。"
+    },
+    health: {
+      type: Type.STRING,
+      description: "日常起居節奏、身體舒緩小調配。切記絕不能進行疾病診治或開藥。僅提供作息、睡眠、泡腳消焦慮放鬆及生活習慣引導（如多喝溫開水）。且最後必須明確附有醫療免責宣告。"
+    },
+    lifeGuidance: {
+      type: Type.STRING,
+      description: "日常小開運指引、色彩/方位/吉祥物件搭配。白話條理清晰，繁體中文。"
+    },
+    currentYearFortune: {
+      type: Type.STRING,
+      description: "2026歲月流轉流年運勢詳解。指出這是發揮才華還是修煉沉潛。字句溫和正向，絕對不能有恐嚇性血光用字。請以溫暖期許的口吻給予2026年的前行建議，融於散文段落中，絕對禁止列出「流年方案 A/B」。"
+    }
       },
       required: [
         "fateRating",
