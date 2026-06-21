@@ -4,8 +4,9 @@
  */
 
 import { Solar } from "lunar-javascript";
-import { FortuneResult, ZiweiPalace, KyuseiInfo, KyuseiStarDetails } from "./types";
+import { FortuneResult, ZiweiPalace, KyuseiInfo, KyuseiStarDetails, DayMasterInfo} from "./types";
 
+import { astro } from 'iztro';
 // 地支順序 (Zi Wei Dou Shu standard grid starting from Yin bottom-left)
 const ZI_BRANCHES = ["寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥", "子", "丑"];
 
@@ -31,7 +32,67 @@ const KYUSEI_NAMES: Record<number, string> = {
   8: "八白土星",
   9: "九紫火星"
 };
+import { astro } from 'iztro';
 
+/**
+ * 核心排盤轉換器：將 iztro 的精準資料轉譯為前端專屬的 FortuneResult 欄位
+ * @param solarDateStr 陽曆生日格式 'YYYY-MM-DD'
+ * @param hourIndex 時辰代碼 (0: 子時, 1: 丑時, ..., 7: 申時[15-17點], ...11: 亥時)
+ * @param gender 性別 '男' | '女'
+ */
+export function calculateZiweiFortune(
+  solarDateStr: string,
+  hourIndex: number,
+  gender: '男' | '女'
+) {
+  // 1. 呼叫開源大腦進行排盤
+  const astrolabe = astro.bySolar(solarDateStr, hourIndex, gender, true, 'zh-TW');
+
+  // 2. 完美對接 12 宮位資料 (ZiweiPalace[])
+  const ziweiPalaces: ZiweiPalace[] = astrolabe.palaces.map((palace) => {
+    // 彙整輔助星曜與雜曜
+    const combinedMinorStars = [
+      ...palace.minorStars.map(star => star.name),
+      ...palace.adjectives.map(star => star.name)
+    ];
+
+    // 如果星曜自帶四化（祿權科忌），自動把四化標記加進輔星列表內
+    palace.majorStars.forEach(star => {
+      if (star.mutagen) combinedMinorStars.push(`${star.name}化${star.mutagen}`);
+    });
+    palace.minorStars.forEach(star => {
+      if (star.mutagen) combinedMinorStars.push(`${star.name}化${star.mutagen}`);
+    });
+
+    // 取主星的第一個亮度（廟旺平陷）作為宮位的總體亮度參考，若無主星則預設為 "平"
+    const palaceLuShuai = palace.majorStars[0]?.brightness || "平";
+
+    return {
+      name: palace.name,                                     // 宮位名稱 (e.g. "命宮")
+      zhi: palace.earthlyBranch,                             // 地支 (e.g. "寅")
+      majorStars: palace.majorStars.map(star => star.name),  // 主要星曜陣列
+      minorStars: combinedMinorStars,                        // 輔星、雜曜與四化組合
+      luShuai: palaceLuShuai                                 // 廟旺平陷狀態
+    };
+  });
+
+  // 3. 找出命宮所在的地支位置，用來組合出例如 "辰宮" 的字串
+  const mingGongPalace = astrolabe.palaces.find(p => p.name === '命宮');
+  const mingGongName = mingGongPalace ? `${mingGongPalace.earthlyBranch}宮` : '';
+
+  // 4. 對接基礎個人資訊部分欄位 (DayMasterInfo 的核心紫微欄位)
+  const ziweiBaseInfo = {
+    mingZhu: astrolabe.soul,                                 // 命主 (e.g. "巨門")
+    shenZhu: astrolabe.body,                                 // 身主 (e.g. "天同")
+    mingGong: mingGongName,                                  // 命宮宮位 (e.g. "辰宮")
+    lunarBirthDate: astrolabe.lunarDate.toString(),          // 陰曆出生日期字串
+  };
+
+  return {
+    ziweiPalaces,
+    ziweiBaseInfo
+  };
+}
 const KYUSEI_ELEMENTS: Record<number, string> = {
   1: "水",
   2: "土",
@@ -413,33 +474,29 @@ export function calculateRawBazi(
   const hourZhi = eightChar.getTimeZhi();
   const shengxiao = lunar.getYearShengXiao();
   const solarTerm = lunar.getJieQi() || "無特殊節氣";
+  // --- 🌟 接上 iztro 新引擎 ---
+  // 1. 把年月日時轉成 iztro 看得懂的格式 'YYYY-MM-DD'
+  const solarDateStr = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
   
+  // 2. 將 24 小時制換算成 12 時辰索引 (子時: 0, 丑時: 1... 亥時: 11)
+  const hourIndex = Math.floor((hour + 1) % 24 / 2);
+  
+  // 3. 正式啟動引擎排盤！(註：iztro 需要性別來排大限，這裡先預設帶入 '男'，不影響基礎 12 宮位)
+  const { ziweiPalaces, ziweiBaseInfo } = calculateZiweiFortune(solarDateStr, hourIndex, '男');
+  // ------------------------------
   const lunarMonth = lunar.getMonth();
   const lunarDay = lunar.getDay();
   
-  // 1. Calculate Ming Gong (命宮)
-  const mIndex = lunarMonth;
-  const hIndex = SHICHEN_ZHI_INDEX[hourZhi] || 1;
-  let mingGongPosIndex = (mIndex - 1) - (hIndex - 1);
-  if (mingGongPosIndex < 0) mingGongPosIndex += 12;
-  const mingGongBranch = ZI_BRANCHES[mingGongPosIndex];
+  // --- 🌟 接上 iztro 新引擎 ---
+  // 1. 把年月日時轉成 iztro 看得懂的格式 'YYYY-MM-DD'
+  const solarDateStr = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
   
-  // 2. Generate 12 palaces
-  const starsByBranch = calculateZiweiStars(lunarMonth, lunarDay, hourZhi, yearGan, yearZhi);
-  const ziweiPalaces: ZiweiPalace[] = PALACE_NAMES.map((name, i) => {
-    let branchIndex = (mingGongPosIndex - i) % 12;
-    if (branchIndex < 0) branchIndex += 12;
-    const branch = ZI_BRANCHES[branchIndex];
-    const stars = starsByBranch[branch];
-    const primaryStar = stars.major[0] || "無主星";
-    
-    return {
-      name,
-      zhi: branch,
-      majorStars: stars.major.length > 0 ? stars.major : ["無主星"],
-      minorStars: stars.minor,
-      luShuai: getLuShuai(primaryStar, branch)
-    };
+  // 2. 將 24 小時制換算成 12 時辰索引 (子時: 0, 丑時: 1... 亥時: 11)
+  const iztroHourIndex = Math.floor((hour + 1) % 24 / 2);
+  
+  // 3. 正式啟動引擎排盤！(預設帶入 '男'，基礎 12 宮位不受性別影響)
+  const { ziweiPalaces, ziweiBaseInfo } = calculateZiweiFortune(solarDateStr, iztroHourIndex, '男');
+  // ------------------------------
   });
 
   // 3. Kyusei Kigaku Calculation
