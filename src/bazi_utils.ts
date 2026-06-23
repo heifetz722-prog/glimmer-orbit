@@ -2,11 +2,11 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-
+// @ts-ignore
 import { Solar } from "lunar-javascript";
 import { FortuneResult, ZiweiPalace, KyuseiInfo, KyuseiStarDetails, DayMasterInfo} from "./types";
 
-import { astro } from 'iztro';
+
 // 地支順序 (Zi Wei Dou Shu standard grid starting from Yin bottom-left)
 const ZI_BRANCHES = ["寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥", "子", "丑"];
 
@@ -53,14 +53,14 @@ export function calculateZiweiFortune(
     // 彙整輔助星曜與雜曜
     const combinedMinorStars = [
       ...palace.minorStars.map(star => star.name),
-      ...palace.adjectives.map(star => star.name)
+     
     ];
 
     // 如果星曜自帶四化（祿權科忌），自動把四化標記加進輔星列表內
     palace.majorStars.forEach(star => {
-      if (star.mutagen) combinedMinorStars.push(`${star.name}化${star.mutagen}`);
+      if (star.mutagen) combinedMinorStars.push(`${star.name}化${star.mutagen}` as any);
     });
-    palace.minorStars.forEach(star => {
+    palace.minorStars.forEach(star => {// @ts-ignore
       if (star.mutagen) combinedMinorStars.push(`${star.name}化${star.mutagen}`);
     });
 
@@ -488,16 +488,6 @@ export function calculateRawBazi(
   const lunarDay = lunar.getDay();
   
   // --- 🌟 接上 iztro 新引擎 ---
-  // 1. 把年月日時轉成 iztro 看得懂的格式 'YYYY-MM-DD'
-  const solarDateStr = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-  
-  // 2. 將 24 小時制換算成 12 時辰索引 (子時: 0, 丑時: 1... 亥時: 11)
-  const iztroHourIndex = Math.floor((hour + 1) % 24 / 2);
-  
-  // 3. 正式啟動引擎排盤！(預設帶入 '男'，基礎 12 宮位不受性別影響)
-  const { ziweiPalaces, ziweiBaseInfo } = calculateZiweiFortune(solarDateStr, iztroHourIndex, '男');
-  // ------------------------------
-  });
 
   // 3. Kyusei Kigaku Calculation
   const adjustedYear = targetCosmicYear(solar, lunar);
@@ -525,7 +515,7 @@ export function calculateRawBazi(
     luckyDirections: kyuseiDirs.lucky,
     avoidDirections: kyuseiDirs.avoid
   };
-
+const mingGongBranch: any = "";
   // 4. Basic Info
   const mingZhu = getMingZhu(mingGongBranch);
   const shenZhu = getShenZhu(yearZhi);

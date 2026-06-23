@@ -36,7 +36,7 @@ import { jsPDF } from "jspdf";
 import { FortuneResult, ZiweiPalace } from "./types";
 import { ORACLE_CARDS, OracleCard } from "./oracle_cards";
 import { getWuxingColor, getWuxingIcon } from "./bazi_utils";
-import { calculateSanFangSiZheng, LIFELONG_PALACE_ALIGNMENTS } from "./ziwei_lifepath";
+import { calculateSanFangSiZheng } from "./ziwei_lifepath";
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 
 // 協助解析並格式化對白，自動去除不必要的 * 號或 ** 號，將 **文字** 替換成 JSX 的 strong，行首的 * 或 - 自動轉換成優雅的 🔸 符號
@@ -393,6 +393,7 @@ const getShichenInfo = (hours: number): ShichenInfo => {
 };
 
 export interface DailyFortune {
+  title?: string;
   ratingLove: number;
   ratingCareer: number;
   ratingWealth: number;
@@ -4463,7 +4464,7 @@ export default function App() {
                                     margin={{ top: 15, right: 15, left: -25, bottom: 5 }}
                                     onClick={(data) => {
                                       if (data && data.activeTooltipIndex !== undefined) {
-                                        setSelectedYearIdx(data.activeTooltipIndex);
+                                        setSelectedYearIdx(data.activeTooltipIndex as number);
                                       }
                                     }}
                                   >
@@ -4522,7 +4523,7 @@ export default function App() {
                                         : "bg-white border-[#EBE3D5] text-[#736B5E] hover:border-[#8C7A6B] hover:bg-[#FAF9F5]"
                                     }`}
                                   >
-                                    <span className="sm:hidden">{d.year % 100}年</span>
+                                   <span className="sm:hidden">{(d.year as any) % 100}年</span>
                                     <span className="hidden sm:inline">📅 {d.year} 年限</span>
                                   </button>
                                 ))}
