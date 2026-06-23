@@ -20,26 +20,15 @@ body {
 /* Force elegant warm charcoal colors on standard body-text helpers */
 .text-stone-700, 
 .text-stone-800, 
-.text-stone-900,
-.text-[#4E473F], 
-.text-[#4E453D], 
-.text-[#544A42],
-.text-[#3C352E],
-.text-[#3E3C38],
-.text-[#2D2D2D],
-.text-[#5C4D3C] {
+.text-stone-900
+{
   color: #1F1B18 !important;
 }
 
 .text-stone-600, 
 .text-stone-500, 
-.text-stone-400,
-.text-[#8C8375], 
-.text-[#A19A8F],
-.text-[#736B5E],
-.text-[#8C7A6B],
-.text-[#7A6C58],
-.text-[#4A4A4A] {
+.text-stone-400
+ {
   color: #1F1B18 !important;
 }
 
