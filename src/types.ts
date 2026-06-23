@@ -35,9 +35,12 @@ export interface DayMasterInfo {
   mingZhu: string;        // 命主 (e.g. "巨門")
   shenZhu: string;        // 身主 (e.g. "天同")
   mingGong: string;       // 命宮宮位 (e.g. "辰宮")
+  birthHour?: number | string;
 }
 
 export interface FortuneResult {
+  offlineUsed?: boolean;
+  fallbackUsed?: boolean;
   calcId?: string;              // 每次計算的獨特隨機印記，用來重置 React DOM 掛載與動畫
   personalInfo: DayMasterInfo & {
     birthPlace: string;
