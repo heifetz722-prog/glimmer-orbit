@@ -25,12 +25,11 @@ body {
   color: #1F1B18 !important;
 }
 
-.text-stone-600, 
-.text-stone-500, 
-.text-stone-400
- {
-  color: #1F1B18 !important;
-}
+.text-stone-600,
+  .text-stone-500,
+  .text-stone-400 {
+    color: #1F1B18 !important;
+  }
 
 /* Standard class typography overrides to enforce relaxed magazine style spacing */
 .leading-relaxed, 
