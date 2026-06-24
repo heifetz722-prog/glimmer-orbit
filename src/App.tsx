@@ -2834,7 +2834,7 @@ export default function App() {
                     const groupEndAge = groupStartAge + 9;
                     const palaceGan = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"][normalizedIndex % 10];
                     const nayinName = ["爐中火", "大林木", "路旁土", "劍鋒金", "山頭火", "澗下水", "城頭土", "白蠟金", "楊柳木", "泉中水", "屋上土", "霹靂火"][normalizedIndex % 12];
-
+const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solarBirthDate) + 1;
                     return (
                       <motion.div
   
@@ -2964,13 +2964,13 @@ export default function App() {
                 {groupStartAge}-{groupEndAge} 歲
               </span>
               <span className="text-[8.5px] font-serif text-stone-400 border border-stone-300/50 px-1 py-[1px] rounded bg-stone-50/50">
-                {p.name}
+                {p.name} 
               </span>
             </div>
 
             {/* 第二排：白話文翻譯與特效 (統一優雅字體) */}
             <span className={`text-[10.5px] font-serif tracking-widest px-1.5 py-0.5 rounded-sm transition-all duration-300 ${
-              p.name === "命宮"
+             (currentAge >= groupStartAge && currentAge <= groupEndAge)
                 ? "bg-[#8E3232]/90 text-white shadow-sm"
                 : isSelected
                 ? "bg-[#8C7A6B]/80 text-white shadow-sm"
