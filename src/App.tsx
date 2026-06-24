@@ -2837,7 +2837,8 @@ export default function App() {
 
                     return (
                       <motion.div
-                        key={`${p.name}-${result.calcId || 'default'}`}
+  
+     key={`${p.name}-${result.calcId || 'default'}`}
                         onClick={() => setSelectedPalace(p)}
                         whileHover={{ 
                           scale: 1.015, 
@@ -2967,7 +2968,21 @@ export default function App() {
                                 ? "bg-[#8C7A6B]/15 text-[#7A6C58] font-bold"
                                 : "text-stone-700"
                             }`}>
-                              {p.name}
+                             {{
+            "命宮": "核心性格與人生",
+            "兄弟": "人際互動與平輩",
+            "夫妻": "感情觀與伴侶",
+            "子女": "創意投資與晚輩",
+            "財帛": "理財能力與價值",
+            "疾厄": "身體健康與潛意識",
+            "遷移": "外在環境與公眾",
+            "僕役": "交友與社交圈",
+            "交友": "交友與社交圈",
+            "官祿": "職涯發展與成就",
+            "田宅": "家庭環境與資產",
+            "福德": "心靈滿足與精神",
+            "父母": "長輩緣與導師"
+          }[p.name] || p.name}
                             </span>
                           </div>
 
