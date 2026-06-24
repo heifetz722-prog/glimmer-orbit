@@ -2955,36 +2955,47 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                         <div className="flex justify-between items-end bg-[#FAF7F2]/50 hover:bg-[#FAF7F2]/10 border-t border-[#EBE3D5] p-1 md:p-1.5 text-[8.5px] font-serif select-none">
                           
                           {/* 左下：大限區段與宮位標籤 (命宮硃砂紅高亮) */}
-                          <div className="flex flex-col items-start leading-none gap-0.5">
-                            <span className="font-mono text-[7.5px] text-stone-400 font-bold tracking-tighter">
-                              {groupStartAge}-{groupEndAge} 歲
-                            </span>
-                            <span className={`text-[11px] font-bold font-serif px-1 py-0.2 rounded ${
-                            (currentAge >= groupStartAge && currentAge <= groupEndAge)
-                                ? "bg-[#8E3232] text-white font-black"
-                                : isSelected
-                                ? "bg-[#8C7A6B]/80 text-white"
-                                : isSfszRelated
-                                ? "bg-[#8C7A6B]/15 text-[#7A6C58] font-bold"
-                                : "text-stone-700"
-                            }`}>
-                             {{
-            "命宮": "核心性格與人生",
-            "兄弟": "人際互動與平輩",
-            "夫妻": "感情觀與伴侶",
-            "子女": "創意投資與晚輩",
-            "財帛": "理財能力與價值",
-            "疾厄": "身體健康與潛意識",
-            "遷移": "外在環境與公眾",
-            "僕役": "交友與社交圈",
-            "交友": "交友與社交圈",
-            "官祿": "職涯發展與成就",
-            "田宅": "家庭環境與資產",
-            "福德": "心靈滿足與精神",
-            "父母": "長輩緣與導師"
-          }[p.name] || p.name}
-                            </span>
-                          </div>
+                          {/* 左下：大限區段與宮位標籤 (命宮硃砂紅高亮) */}
+          <div className="flex flex-col items-start gap-1">
+            
+            {/* 第一排：幾歲到幾歲 + 傳統小宮位 */}
+            <div className="flex items-center gap-1.5 opacity-90">
+              <span className="font-mono text-[8px] text-stone-500 font-medium tracking-tight">
+                {groupStartAge}-{groupEndAge} 歲
+              </span>
+              <span className="text-[8.5px] font-serif text-stone-400 border border-stone-300/50 px-1 py-[1px] rounded bg-stone-50/50">
+                {p.name}
+              </span>
+            </div>
+
+            {/* 第二排：白話文翻譯與特效 (統一優雅字體) */}
+            <span className={`text-[10.5px] font-serif tracking-widest px-1.5 py-0.5 rounded-sm transition-all duration-300 ${
+            (currentAge >= groupStartAge && currentAge <= groupEndAge)
+                ? "bg-[#8E3232]/90 text-white shadow-sm"
+                : isSelected
+                ? "bg-[#8C7A6B]/80 text-white shadow-sm"
+                : isSfszRelated
+                ? "bg-[#8C7A6B]/15 text-[#7A6C58]"
+                : "text-[#5C4D3C]"
+            }`}>
+              {{
+                "命宮": "核心性格與人生",
+                "兄弟": "人際互動與平輩",
+                "夫妻": "感情觀與伴侶",
+                "子女": "創意投資與晚輩",
+                "財帛": "理財能力與價值",
+                "疾厄": "身體健康與潛意識",
+                "遷移": "外在環境與公眾",
+                "僕役": "交友與社交圈",
+                "交友": "交友與社交圈",
+                "官祿": "職涯發展與成就",
+                "田宅": "家庭環境與資產",
+                "福德": "心靈滿足與精神",
+                "父母": "長輩緣與導師"
+              }[p.name] || p.name}
+            </span>
+            
+          </div>
 
                           {/* 中底：納音 */}
                           <div className="hidden lg:block text-[7.5px] text-stone-400 font-serif leading-none tracking-tighter max-w-[42px] truncate pb-0.5">
