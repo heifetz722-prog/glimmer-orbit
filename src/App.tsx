@@ -175,7 +175,7 @@ const PremiumLockBanner = ({ activeTab, onUnlock, onLearnMore }: PremiumLockBann
         </h5>
         
         <div className="bg-[#FAF8F5]/85 border border-[#EBE3D5] p-3 rounded-xl max-w-xl mx-auto text-left space-y-1.5">
-          <p className="text-[11px] font-bold text-[#805D3B] font-serif flex items-center gap-1">
+          <p className="text-[15px] font-bold text-[#805D3B] font-serif flex items-center gap-1">
             <span>✨</span> 解鎖後即可看見什麼？
           </p>
           <p className="text-[10.5px] text-[#6E6457] leading-relaxed font-serif">
