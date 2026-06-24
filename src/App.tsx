@@ -2956,6 +2956,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                           
                           {/* 左下：大限區段與宮位標籤 (命宮硃砂紅高亮) */}
                           {/* 左下：大限區段與宮位標籤 (命宮硃砂紅高亮) */}
+          {/* 左下：大限區段與宮位標籤 (命宮硃砂紅高亮) */}
           <div className="flex flex-col items-start gap-1">
             
             {/* 第一排：幾歲到幾歲 + 傳統小宮位 */}
@@ -2970,7 +2971,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
 
             {/* 第二排：白話文翻譯與特效 (統一優雅字體) */}
             <span className={`text-[10.5px] font-serif tracking-widest px-1.5 py-0.5 rounded-sm transition-all duration-300 ${
-            (currentAge >= groupStartAge && currentAge <= groupEndAge)
+             (currentAge >= groupStartAge && currentAge <= groupEndAge)
                 ? "bg-[#8E3232]/90 text-white shadow-sm"
                 : isSelected
                 ? "bg-[#8C7A6B]/80 text-white shadow-sm"
