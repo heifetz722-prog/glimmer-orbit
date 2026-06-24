@@ -71,7 +71,7 @@ const renderFormattedText = (
             {isBullet && (
               <span className="text-[#8C7A6B] mr-2 mt-1 shrink-0 text-[10px]">🔸</span>
             )}
-           <span className={`flex-1 text-left text-[#3A322C] ${textClassName || "text-[14px] md:text-[16px] font-medium leading-relaxed tracking-wide"}`}>
+            <span className={`flex-1 text-left text-[#2D2D2D] ${textClassName || "text-xs md:text-[13px] leading-relaxed"}`}>
               {parts.map((part, pIdx) => {
                 if (pIdx % 2 === 1) {
                   return (
@@ -2834,7 +2834,7 @@ export default function App() {
                     const groupEndAge = groupStartAge + 9;
                     const palaceGan = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"][normalizedIndex % 10];
                     const nayinName = ["爐中火", "大林木", "路旁土", "劍鋒金", "山頭火", "澗下水", "城頭土", "白蠟金", "楊柳木", "泉中水", "屋上土", "霹靂火"][normalizedIndex % 12];
-const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solarBirthDate) + 1;
+
                     return (
                       <motion.div
   
@@ -2955,47 +2955,36 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                         <div className="flex justify-between items-end bg-[#FAF7F2]/50 hover:bg-[#FAF7F2]/10 border-t border-[#EBE3D5] p-1 md:p-1.5 text-[8.5px] font-serif select-none">
                           
                           {/* 左下：大限區段與宮位標籤 (命宮硃砂紅高亮) */}
-                          {/* 左下：大限區段與宮位標籤 (命宮硃砂紅高亮) */}
-          <div className="flex flex-col items-start gap-1">
-            
-            {/* 第一排：幾歲到幾歲 + 傳統小宮位 */}
-            <div className="flex items-center gap-1.5 opacity-90">
-              <span className="font-mono text-[8px] text-stone-500 font-medium tracking-tight">
-                {groupStartAge}-{groupEndAge} 歲
-              </span>
-              <span className="text-[8.5px] font-serif text-stone-400 border border-stone-300/50 px-1 py-[1px] rounded bg-stone-50/50">
-                {p.name} 
-              </span>
-            </div>
-
-            {/* 第二排：白話文翻譯與特效 (統一優雅字體) */}
-            <span className={`text-[10.5px] font-serif tracking-widest px-1.5 py-0.5 rounded-sm transition-all duration-300 ${
-             (currentAge >= groupStartAge && currentAge <= groupEndAge)
-                ? "bg-[#8E3232]/90 text-white shadow-sm"
-                : isSelected
-                ? "bg-[#8C7A6B]/80 text-white shadow-sm"
-                : isSfszRelated
-                ? "bg-[#8C7A6B]/15 text-[#7A6C58]"
-                : "text-[#5C4D3C]"
-            }`}>
-              {{
-                "命宮": "核心性格與人生",
-                "兄弟": "人際互動與平輩",
-                "夫妻": "感情觀與伴侶",
-                "子女": "創意投資與晚輩",
-                "財帛": "理財能力與價值",
-                "疾厄": "身體健康與潛意識",
-                "遷移": "外在環境與公眾",
-                "僕役": "交友與社交圈",
-                "交友": "交友與社交圈",
-                "官祿": "職涯發展與成就",
-                "田宅": "家庭環境與資產",
-                "福德": "心靈滿足與精神",
-                "父母": "長輩緣與導師"
-              }[p.name] || p.name}
-            </span>
-            
-          </div>
+                          <div className="flex flex-col items-start leading-none gap-0.5">
+                            <span className="font-mono text-[7.5px] text-stone-400 font-bold tracking-tighter">
+                              {groupStartAge}-{groupEndAge} 歲
+                            </span>
+                            <span className={`text-[11px] font-bold font-serif px-1 py-0.2 rounded ${
+                              p.name === "命宮"
+                                ? "bg-[#8E3232] text-white font-black"
+                                : isSelected
+                                ? "bg-[#8C7A6B]/80 text-white"
+                                : isSfszRelated
+                                ? "bg-[#8C7A6B]/15 text-[#7A6C58] font-bold"
+                                : "text-stone-700"
+                            }`}>
+                             {{
+            "命宮": "核心性格與人生",
+            "兄弟": "人際互動與平輩",
+            "夫妻": "感情觀與伴侶",
+            "子女": "創意投資與晚輩",
+            "財帛": "理財能力與價值",
+            "疾厄": "身體健康與潛意識",
+            "遷移": "外在環境與公眾",
+            "僕役": "交友與社交圈",
+            "交友": "交友與社交圈",
+            "官祿": "職涯發展與成就",
+            "田宅": "家庭環境與資產",
+            "福德": "心靈滿足與精神",
+            "父母": "長輩緣與導師"
+          }[p.name] || p.name}
+                            </span>
+                          </div>
 
                           {/* 中底：納音 */}
                           <div className="hidden lg:block text-[7.5px] text-stone-400 font-serif leading-none tracking-tighter max-w-[42px] truncate pb-0.5">
@@ -3567,7 +3556,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                         {activeTab === "personality" && renderFormattedText(result.aiAnalysis.personality)}
                         {activeTab === "dailyFortune" && (
                           <div className="space-y-6">
-                            <div className="font-serif leading-relaxed text-[#3A322C] text-[14px] md:text-[16px] tracking-wide antialiased px-1 text-left font-medium">
+                            <div className="border-b border-[#EAE3D5] pb-3 text-left">
                               <h4 className="text-sm font-semibold text-[#5C4D3C] tracking-wide flex items-center gap-2">
                                 <Clock className="w-4 h-4 text-[#8C7A6B]" />
                                 今日時空能量運勢：{formData.name} 的專屬指引
@@ -3582,7 +3571,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                 <span className="text-[10px] bg-[#EBE3D5] text-[#5C4D3C] px-2 py-0.5 rounded-full font-serif font-bold">
                                   🔮 每日星軌律動綜述
                                 </span>
-                               <p className="text-[14px] md:text-[16px] text-[#3A322C] font-medium font-serif leading-relaxed mt-2.5 antialiased select-text">
+                                <p className="text-sm text-[#4E473F] font-serif leading-relaxed mt-2.5 antialiased select-text">
                                   {activeDailyFortune.summary}
                                 </p>
                               </div>
