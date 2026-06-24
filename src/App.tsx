@@ -3095,18 +3095,26 @@ export default function App() {
                                 : "bg-white border-[#EBE3D5]"
                             }`}
                           >
-                            <div className="flex justify-between items-center w-full">
-                              <span className={`text-[10px] font-bold font-serif ${
-                                p.name === "命宮"
-                                  ? "text-[#8C7A6B]"
-                                  : isSelected ? "text-[#5C4D3C]" : "text-[#736B5E]"
-                              }`}>
-                                {p.name}
-                              </span>
-                              <span className="text-[8px] font-sans text-stone-400">
-                                {p.zhi}宮
-                              </span>
-                            </div>
+                           <div className="flex justify-between items-start w-full">
+  {/* 左側：變成上下兩排，上面小字是原文，下面大字是白話文 */}
+  <div className="flex flex-col">
+    <span className={`text-[8px] opacity-70 font-serif ${
+      p.name === "命宮"
+        ? "text-[#8C7A6B]"
+        : isSelected ? "text-[#5C4D3C]" : "text-[#736B5E]"
+    }`}>
+      {p.name} {/* 原本的文言文變小字輔助 */}
+    </span>
+    <span className="text-[11px] font-bold text-stone-800 leading-tight mt-0.5 tracking-wide">
+      {(p as any).modernDescription || "專屬領域"} {/* ✅ 這裡加了 (p as any) 就不會報錯了 */}
+    </span>
+  </div>
+
+  {/* 右側：保留原本的地支標示 */}
+  <span className="text-[8px] font-sans text-stone-400 mt-0.5">
+    {p.zhi}宮
+  </span>
+</div>
                             
                             {/* 極緊湊的主星顯示 */}
                             <div className="text-[9.5px] font-bold text-[#3C352E]/90 truncate font-serif mt-1 w-full">
