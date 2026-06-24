@@ -178,7 +178,7 @@ const PremiumLockBanner = ({ activeTab, onUnlock, onLearnMore }: PremiumLockBann
           <p className="text-[15px] font-bold text-[#805D3B] font-serif flex items-center gap-1">
             <span>✨</span> 解鎖後即可看見什麼？
           </p>
-          <p className="text-[10.5px] text-[#6E6457] leading-relaxed font-serif">
+          <p className="text-[14px] text-[#6E6457] leading-relaxed font-serif">
             為您深度推演精緻星盤 30,000 字全解。付款後首波權益即刻生效：
             <strong className="text-red-800">「生涯宮、夫妻宮、財帛宮、流年盤、各分頁全數同步解鎖」</strong> 
             並獲得將這份《終身精批長尾說明》一鍵匯出為 PDF 隨身小書的完整特權。
