@@ -71,7 +71,7 @@ const renderFormattedText = (
             {isBullet && (
               <span className="text-[#8C7A6B] mr-2 mt-1 shrink-0 text-[10px]">🔸</span>
             )}
-            <span className={`flex-1 text-left text-[#2D2D2D] ${textClassName || "text-xs md:text-[13px] leading-relaxed"}`}>
+           <span className={`flex-1 text-left text-[#3A322C] ${textClassName || "text-[14px] md:text-[16px] font-medium leading-relaxed tracking-wide"}`}>
               {parts.map((part, pIdx) => {
                 if (pIdx % 2 === 1) {
                   return (
@@ -3582,7 +3582,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                 <span className="text-[10px] bg-[#EBE3D5] text-[#5C4D3C] px-2 py-0.5 rounded-full font-serif font-bold">
                                   🔮 每日星軌律動綜述
                                 </span>
-                                <p className="text-sm text-[#4E473F] font-serif leading-relaxed mt-2.5 antialiased select-text">
+                               <p className="text-[14px] md:text-[16px] text-[#3A322C] font-medium font-serif leading-relaxed mt-2.5 antialiased select-text">
                                   {activeDailyFortune.summary}
                                 </p>
                               </div>
