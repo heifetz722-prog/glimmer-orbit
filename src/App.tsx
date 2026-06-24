@@ -3567,7 +3567,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                         {activeTab === "personality" && renderFormattedText(result.aiAnalysis.personality)}
                         {activeTab === "dailyFortune" && (
                           <div className="space-y-6">
-                            <div className="border-b border-[#EAE3D5] pb-3 text-left">
+                            <div className="font-serif leading-relaxed text-[#3A322C] text-[14px] md:text-[16px] tracking-wide antialiased px-1 text-left font-medium">
                               <h4 className="text-sm font-semibold text-[#5C4D3C] tracking-wide flex items-center gap-2">
                                 <Clock className="w-4 h-4 text-[#8C7A6B]" />
                                 今日時空能量運勢：{formData.name} 的專屬指引
