@@ -5118,7 +5118,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
               <h3 className="text-sm font-bold text-[#8C6239] font-serif uppercase tracking-wider flex items-center gap-1.5 border-b border-[#FAF6F0] pb-2">
                 <span>☯️</span> 最強人生中和趨吉避凶指南 (Consolidated Harmony Matrix)
               </h3>
-              <div className="text-xs md:text-[13px] leading-relaxed text-[#544A42] font-serif antialiased space-y-2">
+              <div className="text-[15px] md:text-[16px] leading-relaxed text-[#3A322C] font-serif antialiased space-y-2">
                 {renderFormattedText(result.aiAnalysis.lifeHarmonyGuide)}
               </div>
             </div>
@@ -5138,7 +5138,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
               <h3 className="text-sm font-semibold border-l-4 border-[#8C7A6B] pl-2.5 text-[#5C4D3C] font-serif uppercase tracking-wider">
                 💼 生涯潛力軌跡探索 (Career & Path Potential)
               </h3>
-              <div className="text-xs md:text-[15px] leading-relaxed text-[#544A42] bg-white border border-[#EBE3D5] rounded-2xl p-6 shadow-2xs">
+              <div className="text-[15px] md:text-[16px] leading-relaxed text-[#3A322C] bg-white border border-[#EBE3D5] rounded-2xl p-6 shadow-2xs">
                 {renderFormattedText(result.aiAnalysis.career)}
               </div>
             </div>
@@ -5148,7 +5148,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
               <h3 className="text-sm font-semibold border-l-4 border-[#8C7A6B] pl-2.5 text-[#5C4D3C] font-serif uppercase tracking-wider">
                 💖 親密關係與婚戀相遇 (Intimate Resonance & Love Path)
               </h3>
-              <div className="text-xs md:text-[15px] leading-relaxed text-[#544A42] bg-white border border-[#EBE3D5] rounded-2xl p-6 shadow-2xs">
+              <div className="text-[15px] md:text-[16px] leading-relaxed text-[#3A322C] bg-white border border-[#EBE3D5] rounded-2xl p-6 shadow-2xs">
                 {renderFormattedText(result.aiAnalysis.love)}
               </div>
             </div>
@@ -5158,7 +5158,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
               <h3 className="text-sm font-semibold border-l-4 border-[#8C7A6B] pl-2.5 text-[#5C4D3C] font-serif uppercase tracking-wider">
                 💰 物質豐盛與心流密碼 (Material Abundance & Wealth Rhythms)
               </h3>
-              <div className="text-xs md:text-[15px] leading-relaxed text-[#544A42] bg-white border border-[#EBE3D5] rounded-2xl p-6 shadow-2xs">
+              <div className="text-[15px] md:text-[16px] leading-relaxed text-[#3A322C] bg-white border border-[#EBE3D5] rounded-2xl p-6 shadow-2xs">
                 {renderFormattedText(result.aiAnalysis.wealth)}
               </div>
             </div>
@@ -5168,7 +5168,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
               <h3 className="text-sm font-semibold border-l-4 border-[#8C7A6B] pl-2.5 text-[#5C4D3C] font-serif uppercase tracking-wider">
                 🛡️ 身心節奏與本命自我療癒 (Somatic Well-being & Healing Guidance)
               </h3>
-              <div className="text-xs md:text-[15px] leading-relaxed text-[#544A42] bg-white border border-[#EBE3D5] rounded-2xl p-6 shadow-2xs">
+              <div className="text-[15px] md:text-[16px] leading-relaxed text-[#3A322C] bg-white border border-[#EBE3D5] rounded-2xl p-6 shadow-2xs">
                 {renderFormattedText(result.aiAnalysis.health)}
               </div>
             </div>
