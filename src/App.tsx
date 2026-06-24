@@ -3564,7 +3564,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                         <span className="text-[8px] font-mono text-[#A19A8F] uppercase tracking-widest">WENQING COMPASSION</span>
                       </div>
 
-                      <div className="font-serif leading-relaxed text-[#4E473F] text-xs md:text-[15px] antialiased px-1 text-left">
+                      <div className="font-serif leading-relaxed text-[#4E473F] text-xs md:text-[16px] antialiased px-1 text-left">
                         {activeTab === "personality" && renderFormattedText(result.aiAnalysis.personality)}
                         {activeTab === "dailyFortune" && (
                           <div className="space-y-6">
