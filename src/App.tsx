@@ -3105,7 +3105,7 @@ export default function App() {
     }`}>
       {p.name} {/* 原本的文言文變小字輔助 */}
     </span>
-    <span className="text-[10px] font-serif font-medium text-[#5C4D3C] leading-relaxed mt-1 tracking-widest">
+    <span className="text-[11px] font-serif font-bold text-[#5C4D3C] leading-tight mt-0.5 tracking-widest">
       {{
         "命宮": "核心性格與人生",
         "兄弟": "人際互動與平輩",
