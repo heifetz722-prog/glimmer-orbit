@@ -3106,7 +3106,21 @@ export default function App() {
       {p.name} {/* 原本的文言文變小字輔助 */}
     </span>
     <span className="text-[11px] font-bold text-stone-800 leading-tight mt-0.5 tracking-wide">
-      {(p as any).modernDescription || "專屬領域"} {/* ✅ 這裡加了 (p as any) 就不會報錯了 */}
+      {{
+        "命宮": "核心性格與人生",
+        "兄弟": "人際互動與平輩",
+        "夫妻": "感情觀與伴侶",
+        "子女": "創意投資與晚輩",
+        "財帛": "理財能力與價值",
+        "疾厄": "身體健康與潛意識",
+        "遷移": "外在環境與公眾",
+        "僕役": "交友與社交圈",
+        "交友": "交友與社交圈",
+        "官祿": "職涯發展與成就",
+        "田宅": "家庭環境與資產",
+        "福德": "心靈滿足與精神",
+        "父母": "長輩緣與導師"
+      }[p.name] || p.name}
     </span>
   </div>
 
