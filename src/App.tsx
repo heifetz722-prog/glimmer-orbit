@@ -3125,7 +3125,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
     {/* 1. 最上層：大限年紀 (左) 與 地支 (右) */}
     <div className="flex justify-between items-start w-full leading-none">
       <span className="text-[9px] md:text-[10px] text-[#8C8375] font-mono opacity-80">
-       {(p as any).ages || (p as any).age || (p as any).decades || ""}
+      {(p as any).decadal?.range || ""}
       </span>
       <span className="text-[9px] font-sans text-stone-400">
         {p.zhi}宮
