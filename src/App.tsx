@@ -3125,28 +3125,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
     {/* 1. 最上層：大限年紀 (左) 與 地支 (右) */}
     <div className="flex justify-between items-start w-full leading-none">
       <span className="text-[9px] md:text-[10px] text-[#8C8375] font-mono opacity-80">
-    {(() => {
-  // 1. 抓出這張命盤是五行局的哪一局 (用 as any 強制通關)
-  const wuXingJu = (result as any).iztroData?.fiveElementsClass || 2; 
-  // 2. 判斷是順行還是逆行
-  const isForward = (result as any).iztroData?.gender === "男" 
-    ? ["甲", "丙", "戊", "庚", "壬"].includes((result as any).iztroData?.solarDate?.split("-")[0] || "") 
-    : ["乙", "丁", "己", "辛", "癸"].includes((result as any).iztroData?.solarDate?.split("-")[0] || "");
-  
-  // 3. 找出命宮在哪個地支 (0-11 代表 子-亥)
-  const mingGongIndex = result.ziweiPalaces.findIndex((palace: any) => palace.name === "命宮");
-  const currentIndex = result.ziweiPalaces.indexOf(p);
-  
-  // 4. 計算這個宮位跟命宮差了幾格
-  let step = isForward ? (currentIndex - mingGongIndex) : (mingGongIndex - currentIndex);
-  if (step < 0) step += 12;
-  
-  // 5. 算出這個宮位的起訖年齡！
-  const startAge = wuXingJu + step * 10;
-  const endAge = startAge + 9;
-  
-  return `${startAge} - ${endAge}`;
-})()}
+{p.decadal ? p.decadal.range : ""}
       </span>
       <span className="text-[9px] font-sans text-stone-400">
         {p.zhi}宮
