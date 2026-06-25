@@ -3125,7 +3125,14 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
     {/* 1. 最上層：大限年紀 (左) 與 地支 (右) */}
     <div className="flex justify-between items-start w-full leading-none">
       <span className="text-[9px] md:text-[10px] text-[#8C8375] font-mono opacity-80">
-{p.decadal ? p.decadal.range : ""}
+{(() => {
+  // 1. 抓出原始的 iztro 資料 (這是一切的源頭)
+  const rawPalaces = (result as any).iztroData?.palaces;
+  // 2. 在原始資料中找到當前宮位對應的資訊
+  const rawData = rawPalaces?.find((pItem: any) => pItem.name === p.name);
+  // 3. 暴力回傳年齡，如果找不到就顯示空值
+  return rawData?.decadal?.range || "";
+})()}
       </span>
       <span className="text-[9px] font-sans text-stone-400">
         {p.zhi}宮
