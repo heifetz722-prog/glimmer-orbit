@@ -3112,65 +3112,70 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                         const hasHuaJi = p.minorStars ? p.minorStars.some(s => s.includes("化忌")) : false;
                         const hasHuaLu = p.minorStars ? p.minorStars.some(s => s.includes("化祿")) : false;
                         
-                        return (
-                          <button
-                            key={`${p.name}-grid-${result.calcId || 'default'}`}
-                            onClick={() => setSelectedPalace(p)}
-                            className={`p-2.5 rounded-xl border text-left transition-all relative flex flex-col justify-between h-[64px] cursor-pointer ${
-                              isSelected
-                                ? "bg-[#FCFAF2] border-[#8C7A6B] ring-1 ring-[#8C7A6B]"
-                                : "bg-white border-[#EBE3D5]"
-                            }`}
-                          >
-                           <div className="flex justify-between items-start w-full">
-  {/* 左側：變成上下兩排，上面小字是原文，下面大字是白話文 */}
-  <div className="flex flex-col">
-    <span className={`text-[8px] opacity-70 font-serif ${
-      p.name === "命宮"
-        ? "text-[#8C7A6B]"
-        : isSelected ? "text-[#5C4D3C]" : "text-[#736B5E]"
-    }`}>
-      {p.name} {/* 原本的文言文變小字輔助 */}
-    </span>
-    <span className="text-[11px] font-serif font-bold text-[#5C4D3C] leading-tight mt-0.5 tracking-widest">
-      {{
-        "命宮": "核心性格與人生",
-        "兄弟": "人際互動與平輩",
-        "夫妻": "感情觀與伴侶",
-        "子女": "創意投資與晚輩",
-        "財帛": "理財能力與價值",
-        "疾厄": "身體健康與潛意識",
-        "遷移": "外在環境與公眾",
-        "僕役": "交友與社交圈",
-        "交友": "交友與社交圈",
-        "官祿": "職涯發展與成就",
-        "田宅": "家庭環境與資產",
-        "福德": "心靈滿足與精神",
-        "父母": "長輩緣與導師"
-      }[p.name] || p.name}
-    </span>
-  </div>
+                       return (
+  <button
+    key={`${p.name}-grid-${result.calcId || 'default'}`}
+    onClick={() => setSelectedPalace(p)}
+    className={`p-2 rounded-xl border transition-all relative flex flex-col justify-between aspect-square cursor-pointer ${
+      isSelected
+        ? "bg-[#FCFAF2] border-[#8C7A6B] ring-1 ring-[#8C7A6B]"
+        : "bg-white border-[#EBE3D5] hover:border-[#8C7A6B]"
+    }`}
+  >
+    {/* 1. 最上層：大限年紀 (左) 與 地支 (右) */}
+    <div className="flex justify-between items-start w-full leading-none">
+      <span className="text-[9px] md:text-[10px] text-[#8C8375] font-mono opacity-80">
+       {(p as any).ages || (p as any).age || (p as any).decades || ""}
+      </span>
+      <span className="text-[9px] font-sans text-stone-400">
+        {p.zhi}宮
+      </span>
+    </div>
 
-  {/* 右側：保留原本的地支標示 */}
-  <span className="text-[8px] font-sans text-stone-400 mt-0.5">
-    {p.zhi}宮
-  </span>
-</div>
-                            
-                            {/* 極緊湊的主星顯示 */}
-                            <div className="text-[9.5px] font-bold text-[#3C352E]/90 truncate font-serif mt-1 w-full">
-                              {p.majorStars.slice(0, 1).join("") || "無主星"}
-                            </div>
+    {/* 2. 中間層：主星顯示 (如果沒有主星就顯示無主星) */}
+    <div className="flex flex-col items-center justify-center flex-grow w-full overflow-hidden">
+      <span className="text-[10px] md:text-[11.5px] font-bold text-[#3C352E] font-serif leading-tight">
+        {p.majorStars && p.majorStars.length > 0 
+          ? p.majorStars.slice(0, 2).join("") 
+          : "無主星"}
+      </span>
+    </div>
 
-                            {/* 四化點綴 */}
-                            {(hasHuaJi || hasHuaLu) && (
-                              <div className="absolute bottom-1 right-1 flex gap-0.5">
-                                {hasHuaLu && <span className="w-1.5 h-1.5 rounded-full bg-green-500 block" title="化祿" />}
-                                {hasHuaJi && <span className="w-1.5 h-1.5 rounded-full bg-red-400 block" title="化忌" />}
-                              </div>
-                            )}
-                          </button>
-                        );
+    {/* 3. 最下層：白話文與宮位名稱 */}
+    <div className="flex flex-col items-start w-full border-t border-[#EBE3D5]/50 pt-1 mt-0.5 text-left leading-none">
+      <span className={`text-[8px] opacity-70 font-serif ${
+        p.name === "命宮" ? "text-[#8C7A6B]" : "text-[#736B5E]"
+      }`}>
+        {p.name}
+      </span>
+      <span className="text-[10px] font-serif font-bold text-[#5C4D3C] mt-0.5 tracking-widest truncate w-full">
+        {{
+          "命宮": "核心性格與人生",
+          "兄弟": "人際互動與平輩",
+          "夫妻": "感情觀與伴侶",
+          "子女": "創意投資與晚輩",
+          "財帛": "理財能力與價值",
+          "疾厄": "身體健康與潛意識",
+          "遷移": "外在環境與公眾",
+          "僕役": "交友與社交圈",
+          "交友": "交友與社交圈",
+          "官祿": "職涯發展與成就",
+          "田宅": "家庭環境與資產",
+          "福德": "心靈滿足與精神",
+          "父母": "長輩緣與導師"
+        }[p.name] || p.name}
+      </span>
+    </div>
+
+    {/* 4. 四化點綴 (保留你原本精巧的設計) */}
+    {(hasHuaJi || hasHuaLu) && (
+      <div className="absolute bottom-1 right-1 flex gap-0.5">
+        {hasHuaLu && <span className="w-1.5 h-1.5 rounded-full bg-green-500 block" title="化祿" />}
+        {hasHuaJi && <span className="w-1.5 h-1.5 rounded-full bg-red-400 block" title="化忌" />}
+      </div>
+    )}
+  </button>
+);
                       })}
                     </div>
                   )}
