@@ -3508,7 +3508,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                 )}
 
                 {/* 分頁頁籤 */}
-                <div className="flex overflow-x-auto whitespace-nowrap scrollbar-none pb-2 mb-6 border-b border-[#EBE3D5] font-serif">
+                <div className="flex overflow-x-auto whitespace-nowrap md:flex-wrap md:justify-center gap-2 pb-2 mb-6 border-b border-[#EBE3D5] font-serif scrollbar-none">
                   {[
                     { id: "personality", label: "🌌 深度天賦性格", icon: User },
                     { id: "dailyFortune", label: "📅 每日時空能量", icon: Clock },
@@ -3528,7 +3528,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                       <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id)}
-                        className={`py-2.5 px-4 lg:px-5 border-b-2 text-xs md:text-sm transition-all flex items-center space-x-2 cursor-pointer mr-2 rounded-t-xl font-serif ${
+                       className={`py-2.5 px-3 md:px-4 lg:px-5 border-b-2 text-[13px] md:text-sm shrink-0 transition-all flex items-center space-x-2 cursor-pointer
                           isActive
                             ? "border-[#8C7A6B] text-[#5C4D3C] bg-[#FAF8F5] font-bold shadow-2xs"
                             : "border-transparent text-[#8C857B] hover:text-[#8C7A6B]"
