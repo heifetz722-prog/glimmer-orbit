@@ -3576,7 +3576,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                         <span className="text-[8px] font-mono text-[#A19A8F] uppercase tracking-widest">WENQING COMPASSION</span>
                       </div>
 
-                      <div className="font-serif leading-relaxed text-[#4E473F] text-xs md:text-[15px] antialiased px-1 text-left">
+                     <div className="font-serif leading-relaxed text-[#4E473F] text-[15px] md:text-[17px] antialiased px-1 text-left">
                        {activeTab === "personality" && renderFormattedText(result.aiAnalysis.personality, "text-[15px] md:text-[17px] text-[#3A322C] leading-relaxed")}
                         {activeTab === "dailyFortune" && (
                           <div className="space-y-6">
@@ -3783,7 +3783,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                 <Compass className="w-4 h-4 text-[#8C7A6B]" />
                                 🗝️ 微光關鍵抉擇過濾網 ‧ 時空心靈軍師
                               </h4>
-                              <p className="text-[11px] text-[#8C8375] mt-1 font-serif leading-relaxed">
+                              <p className="text-[14px] md:text-[15px] text-[#8C8375] mt-1 font-serif leading-relaxed">
                                 大家正面臨職涯、人際或重大抉擇時，常因不確定而感到焦慮。「微光決策軍師」結合您的紫微斗數星曜分佈與九星氣學特徵，專門為精準實用場景定制，避開假大空套話，協助您理性決策，守成避險。
                               </p>
                             </div>
@@ -3798,18 +3798,18 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                 const isActive = decisionSubTab === subTab.id;
                                 return (
                                   <button
-                                    key={subTab.id}
-                                    type="button"
-                                    onClick={() => setDecisionSubTab(subTab.id)}
-                                    className={`py-2 px-4.5 text-xs md:text-[13px] border-b-2 transition-all duration-200 flex items-center gap-1.5 cursor-pointer rounded-t-lg font-bold ${
-                                      isActive
-                                        ? `${subTab.bgActive} border-b-2 font-bold shadow-3xs`
-                                        : "border-transparent text-[#8C857B] hover:text-[#5C4D3C] hover:bg-stone-50"
-                                    }`}
-                                  >
-                                    <span className={`w-1.5 h-1.5 rounded-full ${isActive ? subTab.dotColor : "bg-transparent"}`} />
-                                    <span>{subTab.label}</span>
-                                  </button>
+  key={subTab.id}
+  type="button"
+  onClick={() => setDecisionSubTab(subTab.id)}
+  className={`py-2 px-4.5 text-[14px] md:text-[16px] border-b-2 transition-all duration-200 flex items-center gap-1.5 cursor-pointer
+    ${isActive
+      ? `${subTab.bgActive} border-b-2 font-bold shadow-3xs`
+      : "border-transparent text-[#8C857B] hover:text-[#5C4D3C] hover:bg-stone-50"
+    }`}
+>
+  <span className={`w-1.5 h-1.5 rounded-full ${isActive ? subTab.dotColor : "bg-transparent"}`} />
+  <span>{subTab.label}</span>
+</button>
                                 );
                               })}
                             </div>
