@@ -2767,12 +2767,12 @@ export default function App() {
                     <h3 className="text-[#3C352E] font-serif text-lg font-bold">
                       本命十二宮心靈星軌鏡盤
                     </h3>
-                    <p className="text-xs text-[#8C8375] font-serif leading-relaxed">
+                    <p className="text-[14px] md:text-[16px] text-[#8C8375] font-serif leading-relaxed">
                       ✨ 宇宙星宿默默低語，映照出靈魂的來路與歸途。輕撫下方特定宮位，推引專屬星軌解析。
                     </p>
                   </div>
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="text-[10px] bg-[#FDFBF7] border border-[#EAE2D5] text-[#8C7A6B] px-3 py-1.5 rounded-xl font-mono tracking-widest font-semibold shadow-2xs">
+                    <span className="text-[12px] md:text-[14px] bg-[#FDFBF7] border border-[#EAE2D5] text-[#8C7A6B] px-3 py-1.5 rounded-xl font-mono tracking-widest font-semibold shadow-2xs">
                       🧬 GUEST_ID: {result.calcId || 'DEFAULT'}
                     </span>
                   </div>
@@ -2794,7 +2794,7 @@ export default function App() {
                       </h4>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-x-8 gap-y-2 mt-2 text-xs font-serif text-left select-text">
+                    <div className="grid grid-cols-2 gap-x-8 gap-y-2 mt-2text-[15px] md:text-[17px] font-serif text-left select-text">
                       <div>
                         <span className="text-[#8C8375]">命主雅稱：</span>
                         <strong className="text-stone-800 font-semibold">{result.personalInfo.name || ""}</strong>
