@@ -4800,25 +4800,25 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                     <span className="text-lg">📕</span>
                                     <h5 className="font-serif font-bold text-base text-[#3C352E]">2026 丙午流年 12 宮位神算秘鑰詳批</h5>
                                   </div>
-                                  <div className="space-y-3 font-serif text-sm leading-relaxed text-stone-700">
+                                  <div className="space-y-3 font-seriftext-[16px] md:text-[18px] leading-relaxed text-stone-700">
                                     <p>
                                       <strong>【丙午太歲沖擊要旨】</strong>: {result.personalInfo.name} 您好，2026年歲次丙午，天干「丙」屬陽火，地支「午」屬陽火，此為歲火極盛之年。對於您的生肖【{result.personalInfo.shengxiao}】而言，與丙午氣流存在強烈的碰撞。
                                     </p>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
                                       <div className="p-4 bg-[#FAF9F5] rounded-2xl border border-[#E8DFC9]/60">
                                         <span className="text-xs text-red-700 bg-red-50 border border-red-200/50 px-2 py-0.5 rounded-full font-bold">事業宮流限點睛</span>
-                                        <p className="text-xs text-stone-600 mt-2">
+                                        <p className="text-[15px] md:text-[17px] leading-[1.8] text-stone-600 mt-2">
                                           流年主星與大限官祿宮合中有沖，代表2026年春季（陰曆一月至三月）會有意外之升遷或合夥邀約。惟午後烈火燃燒過急，切忌貪功而與直屬主管發生口角。夏季宜藏鋒芒，多聽少動，秋季（金秋之時）則可大力開拓。
                                         </p>
                                       </div>
                                       <div className="p-4 bg-[#FAF9F5] rounded-2xl border border-[#E8DFC9]/60">
                                         <span className="text-xs text-amber-700 bg-amber-50 border border-amber-200/50 px-2 py-0.5 rounded-full font-bold">財帛宮流限點睛</span>
-                                        <p className="text-xs text-stone-600 mt-2">
+                                        <p className="text-[15px] md:text-[17px] leading-[1.8] text-stone-600 mt-2">
                                           流年祿馬交馳入您的偏財暗庫。雖然今年表面開銷極大，包括居家裝潢與自我進修學費支出增多，但正財生旺，每逢陰曆五月、九月會有偏財天降。建議設置限額定存，切莫參與高槓桿炒作。
                                         </p>
                                       </div>
                                     </div>
-                                    <p className="text-xs text-stone-500 italic mt-2 bg-stone-50 p-3 rounded-xl border border-stone-100">
+                                    <p className="text-[15px] md:text-[17px] leading-[1.8] text-stone-500 italic mt-2 bg-stone-50 p-3 rounded-xl border border-stone-100">
                                       🔸 秘訣點撥：您的福德宮與本命年支相生。日常若遇煩悶之事，多朝「正南方」或「正東方」散步十五分鐘，能引導火氣轉移，化燥為雅。
                                     </p>
                                   </div>
