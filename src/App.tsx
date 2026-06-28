@@ -4830,17 +4830,17 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                     <span className="text-lg">📔</span>
                                     <h5 className="font-serif font-bold text-base text-[#3C352E]">終身本命紫微斗數格局深度解析</h5>
                                   </div>
-                                  <div className="space-y-4 text-sm font-serif leading-relaxed text-stone-700">
+                                  <div className="space-y-4 text-[16px] md:text-[18px] font-serif leading-relaxed text-stone-700">
                                     <p>
                                       通過【{result.personalInfo.lunarBirthDate.split(" ")[1] || "本命"}{result.personalInfo.shengxiao}年】與三方四正格網測量，您的靈魂潛在星耀格局歸類於<strong>「紫微獨坐而臨天網，五行本命得水木相融」</strong>之尊雅格局。您具有獨特的精神潔癖與同理共感力。
                                     </p>
-                                    <div className="p-4 bg-[#FAFDF6] rounded-2xl border border-green-200/40 text-xs space-y-2">
+                                    <div className="p-4 bg-[#FAFDF6] rounded-2xl border border-green-200/40 text-[15px] md:text-[17px] leading-[1.8]space-y-2">
                                       <strong className="text-green-800 block">✦ 終身命運優勢（Golden Talents）</strong>
                                       <p className="text-stone-600">
                                         您的天機智曜或太陰柔星對本命有默默拱照之能。您在遭遇人生谷底時，往往能在絕境處突然遇見不求利益回報的神秘強大貴人拉你一把。對文字、美學、心理或玄學具有極高的天賦直覺，適合從事高增值智識產業。
                                       </p>
                                     </div>
-                                    <div className="p-4 bg-[#FDF7F6] rounded-2xl border border-red-200/40 text-xs space-y-2">
+                                    <div className="p-4 bg-[#FDF7F6] rounded-2xl border border-red-200/40 text-[15px] md:text-[17px] leading-[1.8] space-y-2">
                                       <strong className="text-red-800 block">✦ 避險防漏警示（Vulnerability Blockers）</strong>
                                       <p className="text-stone-600">
                                         需注意「交友宮」與「疾厄宮」在天干忌星衝撞時產生的內耗。您極其容易因過度在意旁人的隻言片語而感到胸悶、焦慮、失眠。36歲至45歲大限財富有漏，不可將資金輕易借貸給親戚或多年摯友，簽約需加倍小心核查條款。
@@ -4858,7 +4858,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                     <span className="text-lg">🧭</span>
                                     <h5 className="font-serif font-bold text-base text-[#3C352E]">奇門遁術 · 流年改運避兇急救大金帖</h5>
                                   </div>
-                                  <div className="space-y-3 font-serif text-xs leading-relaxed text-stone-600">
+                                  <div className="space-y-3 font-serif text-[15px] md:text-[17px] leading-[1.8] leading-relaxed text-stone-600">
                                     <div className="overflow-x-auto">
                                       <table className="w-full text-left border-collapse border border-stone-200">
                                         <thead>
