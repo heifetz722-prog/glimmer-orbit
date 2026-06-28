@@ -4691,24 +4691,24 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                     <div className="p-3.5 bg-white border border-dashed border-[#E0D7C5] rounded-xl flex items-start gap-2.5 opacity-75">
                                       <span className="text-lg">📕</span>
                                       <div>
-                                        <h6 className="text-xs font-bold text-[#5C4D3C] font-serif">2026 丙午流年年運 12 宮位神算秘鑰</h6>
-                                        <p className="text-[10px] text-stone-500 mt-1">深度覆蓋事業動線、偏財暗庫盈虧、感情緣會與流月福運吉兇度。</p>
+                                        <h6 className="text-[14] font-bold text-[#5C4D3C] font-serif">2026 丙午流年年運 12 宮位神算秘鑰</h6>
+                                        <p className="text-[12px] text-stone-500 mt-1">深度覆蓋事業動線、偏財暗庫盈虧、感情緣會與流月福運吉兇度。</p>
                                       </div>
                                     </div>
 
                                     <div className="p-3.5 bg-white border border-dashed border-[#E0D7C5] rounded-xl flex items-start gap-2.5 opacity-75">
                                       <span className="text-lg">📔</span>
                                       <div>
-                                        <h6 className="text-xs font-bold text-[#5C4D3C] font-serif">終身本命紫微斗數精緻詳批大書</h6>
-                                        <p className="text-[10px] text-stone-500 mt-1">15,000 字巨作，對焦宿命潛能、大限起伏、吉利貴人格局與解憂藥方。</p>
+                                        <h6 className="text-[14] font-bold text-[#5C4D3C] font-serif">終身本命紫微斗數精緻詳批大書</h6>
+                                        <p className="text-[12px] text-stone-500 mt-1">15,000 字巨作，對焦宿命潛能、大限起伏、吉利貴人格局與解憂藥方。</p>
                                       </div>
                                     </div>
 
                                     <div className="p-3.5 bg-white border border-dashed border-[#E0D7C5] rounded-xl flex items-start gap-2.5 opacity-75">
                                       <span className="text-lg">📗</span>
                                       <div>
-                                        <h6 className="text-xs font-bold text-[#5C4D3C] font-serif">奇門遁術 · 流月避兇行事曆</h6>
-                                        <p className="text-[10px] text-stone-500 mt-1">精算未来 12 個月的五行防漏財與感情防口角開運吉日、煞方方位。</p>
+                                        <h6 className="text-[14]font-bold text-[#5C4D3C] font-serif">奇門遁術 · 流月避兇行事曆</h6>
+                                        <p className="text-[12px] text-stone-500 mt-1">精算未来 12 個月的五行防漏財與感情防口角開運吉日、煞方方位。</p>
                                       </div>
                                     </div>
                                   </div>
@@ -4720,7 +4720,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                     <div className="flex items-center gap-1 text-[#D97706]">
                                       <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                                     </div>
-                                    <span className="text-[11px] text-[#A69D90]">超過 312,850+ 位付費用戶真誠推薦和諧高反饋</span>
+                                    <span className="text-[14px] text-[#A69D90]">超過 312,850+ 位付費用戶真誠推薦和諧高反饋</span>
                                   </div>
                                   
                                   <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
