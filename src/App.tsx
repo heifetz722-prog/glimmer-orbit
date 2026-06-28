@@ -4443,7 +4443,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                         )}
                         {activeTab === "career" && (
                           isPremiumUnlocked ? (
-                            renderFormattedText(result.aiAnalysis.career)
+                           renderFormattedText(result.aiAnalysis.career, "text-[16px] md:text-[18px] text-[#3A322C] leading-[1.8] tracking-[0.02em]")
                           ) : (
                             <div className="space-y-3">
                               {renderTruncatedFormattedText(result.aiAnalysis.career)}
