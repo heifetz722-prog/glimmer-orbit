@@ -4471,7 +4471,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                         )}
                         {activeTab === "wealth" && (
                           isPremiumUnlocked ? (
-                            renderFormattedText(result.aiAnalysis.wealth)
+                           renderFormattedText(result.aiAnalysis.wealth, "text-[16px] md:text-[18px] text-[#3A322C] leading-[1.8] tracking-[0.02em]")
                           ) : (
                             <div className="space-y-3">
                               {renderTruncatedFormattedText(result.aiAnalysis.wealth)}
@@ -4483,12 +4483,12 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                             </div>
                           )
                         )}
-                        {activeTab === "health" && renderFormattedText(result.aiAnalysis.health)}
-                        {activeTab === "lifeGuidance" && renderFormattedText(result.aiAnalysis.lifeGuidance)}
+                        {activeTab === "health" && renderFormattedText(result.aiAnalysis.health, "text-[16px] md:text-[18px] text-[#3A322C] leading-[1.8] tracking-[0.02em]")}
+                       {activeTab === "lifeGuidance" && renderFormattedText(result.aiAnalysis.lifeGuidance, "text-[16px] md:text-[18px] text-[#3A322C] leading-[1.8] tracking-[0.02em]")}
                         {activeTab === "currentYearFortune" && (
                           <div className="space-y-6">
                             {isPremiumUnlocked ? (
-                              <div>{renderFormattedText(result.aiAnalysis.currentYearFortune)}</div>
+                              <div>{renderFormattedText(result.aiAnalysis.currentYearFortune, "text-[16px] md:text-[18px] text-[#3A322C] leading-[1.8] tracking-[0.02em]")}</div>
                             ) : (
                               <div className="space-y-3">
                                 {renderTruncatedFormattedText(result.aiAnalysis.currentYearFortune)}
