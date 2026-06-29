@@ -1805,7 +1805,7 @@ export default function App() {
   // 智能滾動對話框
   useEffect(() => {
     if (chatBottomRef.current) {
-      chatBottomRef.current.scrollIntoView({ behavior: "smooth" });
+      //chatBottomRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [chatHistory, isSendingQuestion]);
 
