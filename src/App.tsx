@@ -217,7 +217,7 @@ const PremiumLockBanner = ({ activeTab, onUnlock, onLearnMore }: PremiumLockBann
 const SUGGESTED_QUESTIONS = [
   "親愛的旅伴，我的主命盤展現了什麼天賦微光與天生優勢？",
   "九星氣學的本命星與月命星，在日常生活中該如何運用來調整起居？",
-  "我正在經歷一些人生起伏，能從宮位與星曜的流轉中得到什麼溫和建議？",
+  "我正在經歷一些人生時空氣感和諧度，能從宮位與星曜的流轉中得到什麼溫和建議？",
   "關於我的 2026 丙午歲月流流，有什麼穩紮穩打的沉潛方案嗎？",
   "吉利開運方位和避忌方向，在日常生活空間佈局上能怎麼巧妙結合？"
 ];
@@ -4602,14 +4602,14 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                 >
                                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-[#F0EAE1] pb-2.5 mb-3">
                                     <div className="flex flex-wrap items-center gap-1.5">
-                                      <span className="text-[10px] sm:text-xs font-serif font-bold bg-[#8C7A6B] text-white px-2 py-0.5 rounded-lg shrink-0">
+                                      <span className="text-[13px] md:text-[14px] sm:text-xs font-serif font-bold bg-[#8C7A6B] text-white px-2 py-0.5 rounded-lg shrink-0">
                                         {futureData[selectedYearIdx]?.year} 流年
                                       </span>
-                                      <span className="text-[11px] sm:text-xs font-serif font-bold text-[#5C5043]">
+                                      <span className="text-[14px] md:text-[15px] sm:text-xs font-serif font-bold text-[#5C5043]">
                                         起伏詳諦：【<strong>{futureData[selectedYearIdx]?.theme}</strong>】
                                       </span>
                                     </div>
-                                    <span className={`text-[10px] sm:text-xs font-serif font-bold px-2.5 py-0.5 rounded-full self-start sm:self-auto ${
+                                    <span className={`text-[13px] md:text-[14px] sm:text-xs font-serif font-bold px-2.5 py-0.5 rounded-full self-start sm:self-auto ${
                                       (futureData[selectedYearIdx]?.rating || 0) >= 82
                                         ? "bg-[#F0FAF4] text-[#22C55E]"
                                         : (futureData[selectedYearIdx]?.rating || 0) >= 70
@@ -4619,10 +4619,10 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                       時空氣感和諧度：{futureData[selectedYearIdx]?.rating}%
                                     </span>
                                   </div>
-                                  <p className="text-[10px] font-bold text-[#8C664B] font-serif mb-2 flex items-center gap-1.5">
+                                  <p className="text-[15px] md:text-[16px] font-bold text-[#8C664B] font-serif mb-2 flex items-center gap-1.5">
                                     {futureData[selectedYearIdx]?.starVibe}
                                   </p>
-                                  <p className="text-[12.5px] leading-relaxed text-[#736B5E] font-serif whitespace-pre-line antialiased">
+                                  <p className="text-[15px] md:text-[17px] leading-[1.8] text-[#736B5E] font-serif whitespace-pre-line antialiased">
                                     {futureData[selectedYearIdx]?.desc}
                                   </p>
                                 </motion.div>
