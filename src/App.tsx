@@ -3464,7 +3464,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
               </div>
 
               {/* 第三單元：陪伴旅伴 · 終身生活詳批長卷 */}
-              <div id="report-section" className="bg-white border border-[#EBE3D5] p-6 md:p-9 shadow-[0_8px_30px_rgba(140,122,107,0.02)] relative overflow-hidden rounded-3xl">
+              <div id="report-section" className="bg-white border border-[#EBE3D5] w-full px-3 py-5 md:p-9shadow-[0_8px_30px_rgba(140,122,107,0.02)] relative overflow-hidden rounded-3xl">
                 <div className="absolute top-0 left-0 w-full h-[4px] bg-[#8C7A6B]" />
                 
                 {/* 頂部說明與狀態 */}
