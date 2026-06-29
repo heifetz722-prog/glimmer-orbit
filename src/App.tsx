@@ -3337,8 +3337,8 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                             <div className="flex items-start gap-2.5 min-w-0">
                               <span className="text-base shrink-0 mt-0.5">💬</span>
                               <div className="min-w-0">
-                                <p className="text-[11px] font-bold text-[#5C4D3C] leading-snug">想要深度探究「{activePalace.name}」中複雜星曜的本格與時空「真實命理玄奧解析」嗎？</p>
-                                <p className="text-[9.5px] text-[#8C8375] font-sans mt-0.5 leading-relaxed">不論是流年干支、四化飛星的交互沖擊，或是面對具體人生疑惑，隨行顧問已落座第四章【微光一對一心靈晤談】隨時為您開解。</p>
+                                <p className="text-[14px] md:text-[16px] font-bold text-[#5C4D3C] leading-snug">想要深度探究「{activePalace.name}」中複雜星曜的本格與時空「真實命理玄奧解析」嗎？</p>
+                                <p className="text-[13px] md:text-[15px] text-[#8C8375] font-sans mt-0.5 leading-relaxed">不論是流年干支、四化飛星的交互沖擊，或是面對具體人生疑惑，隨行顧問已落座第四章【微光一對一心靈晤談】隨時為您開解。</p>
                               </div>
                             </div>
                             <button 
@@ -3348,7 +3348,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                   element.scrollIntoView({ behavior: "smooth" });
                                 }
                               }}
-                              className="shrink-0 bg-[#8C7A6B] hover:bg-[#706053] text-[9.5px] text-white px-3.5 py-1.5 rounded-xl font-bold transition-all cursor-pointer shadow-3xs"
+                              className="shrink-0 bg-[#8C7A6B] hover:bg-[#706053] text-[13px] md:text-[14px] text-white px-3.5 py-1.5 rounded-xl font-bold transition-all cursor-pointer shadow-3xs"
                             >
                               落座晤談 ☕
                             </button>
