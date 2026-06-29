@@ -4915,7 +4915,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
               </div>
 
               {/* 第四單元：心靈對話小庵（與人生策略旅伴對話一對一） */}
-              <div id="chapter-4-section" className="bg-white border border-[#EBE3D5] p-5 md:p-8 shadow-[0_8px_30px_rgba(140,122,107,0.02)] rounded-3xl relative overflow-hidden">
+              <div id="chapter-4-section" className="bg-white border border-[#EBE3D5]w-full px-2 py-5 md:p-8 shadow-[0_8px_30px_rgba(140,122,107,0.02)] rounded-3xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-[4px] bg-[#8C7A6B]" />
 
                 <div className="flex items-center space-x-2 border-b border-[#EBE3D5] pb-3 mb-4 text-left">
@@ -4934,14 +4934,14 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                 </p>
 
                 {/* 對話展示框 */}
-                <div className="bg-[#FAF8F5] rounded-3xl border border-[#EBD6C1]/35 px-2 py-4 md:p-7 md:p-7 h-[480px] overflow-y-auto mb-5 space-y-6 shadow-inner">
+                <div className="w-fullbg-[#FAF8F5] rounded-3xl border border-[#EBD6C1]/35 px-2 py-4 md:p-7 md:p-7 h-[480px] overflow-y-auto mb-5 space-y-6 shadow-inner">
                   
                   {/* 開場 */}
                   <div className="flex items-start space-x-2.5">
                     <div className="bg-[#8C7A6B] text-white px-2.5 py-1 text-[9px] font-bold font-serif shadow-xs rounded-lg shrink-0">
                       夥伴
                     </div>
-                    <div className="bg-white border border-[#EBE3D5] rounded-3xl p-3.5 md:p-7 max-w-[95%] md:max-w-[85%] text-[16px] md:text-[17px] font-serif leading-[1.75] text-[#333333] shadow-xs text-left">
+                    <div className="bg-white border border-[#EBE3D5] rounded-3xl px-3 py-3 md:p-7 max-w-[95%] md:max-w-[85%] text-[16px] md:text-[17px] font-serif leading-[1.75] text-[#333333] shadow-xs text-left">
                       有緣人，歡迎落座微光小庵。很高興今天能與您在星辰下偶遇 ☕
                       <div className="h-3.5" />
                       不論是對剛才的紫微宮位星宿、或是「2026守成節奏、日常開運空間、或是特定生活起伏中的情感、工作煩惱」，都可以點下方卡片直接與我攀談，或輸入大白話心事，我會溫溫柔柔地陪著您想出實用方案。
