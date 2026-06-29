@@ -4934,7 +4934,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                 </p>
 
                 {/* 對話展示框 */}
-                <div className="bg-[#FAF8F5] rounded-3xl border border-[#EBD6C1]/35 p-3 md:p-7 h-[480px] overflow-y-auto mb-5 space-y-6 shadow-inner">
+                <div className="bg-[#FAF8F5] rounded-3xl border border-[#EBD6C1]/35 px-2 py-4 md:p-7 md:p-7 h-[480px] overflow-y-auto mb-5 space-y-6 shadow-inner">
                   
                   {/* 開場 */}
                   <div className="flex items-start space-x-2.5">
