@@ -3436,7 +3436,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                       <span className="mr-1.5">🍀</span>
                       <span>常駐開運吉利方向 (Lucky Directions)：</span>
                     </div>
-                    <ul className="text-xs text-[#1F1B18] space-y-1.5 pl-1.5 font-medium">
+                    <ul className="text-[15px] md:text-[16px] text-[#1F1B18] space-y-1.5 pl-1.5 font-medium">
                       {result.kyusei.luckyDirections.map((dir, idx) => (
                         <li key={idx} className="flex items-center gap-1.5">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E]" />
@@ -3447,11 +3447,11 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                   </div>
 
                   <div className="space-y-2">
-                    <div className="flex items-center text-xs font-bold text-[#A44330]">
+                    <div className="flex items-centertext-[16px] md:text-[18px] font-bold text-[#A44330]">
                       <span className="mr-1.5">🛡️</span>
                       <span>日常守護避忌方向 (Avoid Directions)：</span>
                     </div>
-                    <ul className="text-xs text-[#1F1B18] space-y-1.5 pl-1.5 font-medium">
+                    <ul className="text-[15px] md:text-[16px] text-[#1F1B18] space-y-1.5 pl-1.5 font-medium">
                       {result.kyusei.avoidDirections.map((dir, idx) => (
                         <li key={idx} className="flex items-center gap-1.5">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#EF4444]" />
