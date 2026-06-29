@@ -3367,12 +3367,12 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                   <div className="w-6 h-6 rounded-full bg-[#FAF5EE] border border-[#EBDCC5] flex items-center justify-center text-xs text-[#8C7A6B] mr-2">
                     🌱
                   </div>
-                  <h3 className="text-sm font-serif text-[#5C4D3C] tracking-widest font-semibold uppercase">
+                  <h3 className="text-[18px] md:text-[20px] font-serif text-[#5C4D3C] tracking-widest font-semibold uppercase">
                     第二章 ‧ 扶桑九星氣學 / THE NATURAL SPIRIT MATRIX
                   </h3>
                 </div>
 
-                <p className="text-xs text-[#1F1B18] font-serif leading-relaxed text-left font-medium">
+                <p className="text-[16px] md:text-[18px] leading-[1.8] text-[#1F1B18] font-serif leading-relaxed text-left font-medium">
                   九星氣學（Kyusei Kigaku）將世間靈魂比作九種天地初生的能量氣流。我們是風、是水、或者是廣袤的大地。
                   這裡為你解讀出生年份的「本命星（你隱密、本然的靈魂深谷）」與出生月份的「月命星（你與日常世界溫柔交手的方式）」：
                 </p>
@@ -3381,7 +3381,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                   
                   {/* 本命星 */}
                   <div className="bg-white border border-[#EBE3D5] rounded-2xl p-5.5 space-y-3 shadow-sm text-left relative overflow-hidden font-serif">
-                    <span className="text-[9px] text-[#5C4D3C] block font-sans tracking-widest font-bold uppercase">本命星 (Year Star) - 天生內在靈魂</span>
+                    <span className="text-[12px] md:text-[14px] text-[#5C4D3C] block font-sans tracking-widest font-bold uppercase">本命星 (Year Star) - 天生內在靈魂</span>
                     <div className="flex items-center space-x-3">
                       <div
                         className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-serif font-bold text-sm shadow-sm"
@@ -3390,15 +3390,15 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                         {result.kyusei.yearStar.name.substring(0, 2)}
                       </div>
                       <div>
-                        <h4 className="text-sm font-serif font-semibold text-[#1F1B18]">
+                        <h4 className="text-[18px] md:text-[20px] font-bold font-serif font-semibold text-[#1F1B18]">
                           {result.kyusei.yearStar.name}
                         </h4>
-                        <p className="text-[10px] text-[#1F1B18] font-serif">
+                        <p className="text-[14px] md:text-[15px] text-[#1F1B18] font-serif">
                           大自然五行屬性：<strong className="text-[#A44330]">{result.kyusei.yearStar.element}</strong> 元素
                         </p>
                       </div>
                     </div>
-                    <p className="text-xs text-[#1F1B18] font-serif leading-relaxed italic bg-[#FDFCFB] border border-[#F0EAE1] p-3 rounded-xl font-medium opacity-100">
+                    <p className="text-[15px] md:text-[17px] text-[#1F1B18] font-serif leading-[1.8] italic bg-[#FDFCFB] border border-[#F0EAE1] p-3 rounded-xl font-medium opacity-100">
                       💡 {result.kyusei.yearStar.desc}
                     </p>
                   </div>
