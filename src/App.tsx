@@ -3405,7 +3405,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
 
                   {/* 月命星 */}
                   <div className="bg-white border border-[#EBE3D5] rounded-2xl p-5.5 space-y-3 shadow-sm text-left relative overflow-hidden font-serif">
-                    <span className="text-[9px] text-[#5C4D3C] block font-sans tracking-widest font-bold uppercase">月命星 (Month Star) - 日常做事與外在習慣</span>
+                    <span className="text-[12px] md:text-[14px] text-[#5C4D3C] block font-sans tracking-widest font-bold uppercase">月命星 (Month Star) - 日常做事與外在習慣</span>
                     <div className="flex items-center space-x-3">
                       <div
                         className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-serif font-bold text-sm shadow-sm"
@@ -3417,12 +3417,12 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                         <h4 className="text-sm font-serif font-semibold text-[#1F1B18]">
                           {result.kyusei.monthStar.name}
                         </h4>
-                        <p className="text-[10px] text-[#1F1B18] font-serif">
+                        <p className="text-[14px] md:text-[15px] text-[#1F1B18] font-serif">
                           大自然五行屬性：<strong className="text-[#A44330]">{result.kyusei.monthStar.element}</strong> 元素
                         </p>
                       </div>
                     </div>
-                    <p className="text-xs text-[#1F1B18] font-serif leading-relaxed italic bg-[#FDFCFB] border border-[#F0EAE1] p-3 rounded-xl font-medium opacity-100">
+                    <p className="text-[15px] md:text-[17px] text-[#1F1B18] font-serif leading-[1.8] italic bg-[#FDFCFB] border border-[#F0EAE1] p-3 rounded-xl font-medium opacity-100">
                       💡 {result.kyusei.monthStar.desc}
                     </p>
                   </div>
@@ -3432,7 +3432,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                 {/* 空間方位小開運 */}
                 <div className="bg-[#FCFAF2] border border-[#E9E1CD] rounded-2xl p-5 text-left grid grid-cols-1 md:grid-cols-2 gap-5 leading-normal font-serif">
                   <div className="space-y-2">
-                    <div className="flex items-center text-xs font-bold text-[#1F1B18]">
+                    <div className="flex items-center text-[16px] md:text-[18px] font-bold text-[#1F1B18]">
                       <span className="mr-1.5">🍀</span>
                       <span>常駐開運吉利方向 (Lucky Directions)：</span>
                     </div>
