@@ -2794,7 +2794,7 @@ export default function App() {
                       </h4>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-x-8 gap-y-2 mt-2text-[15px] md:text-[17px] font-serif text-left select-text">
+                    <div className="grid grid-cols-2 gap-x-8 gap-y-2 mt-2 text-[13px] md:text-[14px] font-serif text-left select-text">
                       <div>
                         <span className="text-[#8C8375]">命主雅稱：</span>
                         <strong className="text-stone-800 font-semibold">{result.personalInfo.name || ""}</strong>
@@ -2817,7 +2817,7 @@ export default function App() {
                       </div>
                     </div>
 
-                    <div className="text-[9.5px] text-[#9A7D64] bg-[#FAF2EB] border border-[#EBE3D5] py-1.5 px-3 rounded-xl flex items-center justify-center gap-1.5 select-none font-medium mt-2 shadow-2xs">
+                    <div className="text-[12px] md:text-[13px] text-[#9A7D64] bg-[#FAF2EB] border border-[#EBE3D5] py-1.5 px-3 rounded-xl flex items-center justify-center gap-1.5 select-none font-medium mt-2 shadow-2xs">
                       <span>✨</span>
                       <span>輕撫十二宮 ‧ 凝神牽引命曜星軌</span>
                     </div>
