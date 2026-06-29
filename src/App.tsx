@@ -4995,7 +4995,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
 
                 {/* 快捷推薦追問 */}
                 <div className="mb-5 text-left">
-                  <span className="text-[10px] text-[#8C7A6B] block font-serif uppercase tracking-widest font-semibold mb-2.5">
+                  <span className="text-[13px] md:text-[15px] text-[#8C7A6B] block font-serif uppercase tracking-widest font-semibold mb-2.5">
                     👉 點選下方手印，一鍵與旅伴探討：
                   </span>
                   <div className="flex flex-wrap gap-2">
@@ -5004,7 +5004,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                         key={idx}
                         onClick={() => handleAskQuestion(q)}
                         disabled={isSendingQuestion}
-                        className="text-[11px] bg-[#FAF8F5] border border-[#E3DAC9] hover:border-[#8C7A6B] text-[#736A5E] hover:text-[#3C352E] px-4 py-2 rounded-full transition-all cursor-pointer text-left font-serif shadow-xs"
+                        className="text-[14px] md:text-[15px] bg-[#FAF8F5] border border-[#E3DAC9] hover:border-[#8C7A6B] text-[#736A5E] hover:text-[#3C352E] px-4 py-2 rounded-full transition-all cursor-pointer text-left font-serif shadow-xs"
                       >
                         🌾 {q}
                       </button>
@@ -5025,7 +5025,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                     }}
                     placeholder="輸入大白話心事，例：我的九星代表大自然中的風，這對我的新工作有什麼啟發？"
                     disabled={isSendingQuestion}
-                    className="w-full bg-white border border-[#EBE3D5] focus:border-[#8C7A6B] focus:ring-1 focus:ring-[#8C7A6B]/20 rounded-2xl pl-5.5 pr-14 py-4 text-xs text-[#3C352E] placeholder-[#B5AB9C] transition-all outline-none shadow-xs"
+                    className="w-full text-[15px] md:text-[16px]bg-white border border-[#EBE3D5] focus:border-[#8C7A6B] focus:ring-1 focus:ring-[#8C7A6B]/20 rounded-2xl pl-5.5 pr-14 py-4 text-xs text-[#3C352E] placeholder-[#B5AB9C] transition-all outline-none shadow-xs"
                   />
                   <button
                     onClick={() => handleAskQuestion()}
