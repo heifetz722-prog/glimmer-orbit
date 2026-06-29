@@ -3320,10 +3320,10 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                         );
                                       })
                                     ) : (
-                                      <span className="text-stone-400 italic text-[9.5px]">宮位清平安穩，無飛曜四化</span>
+                                      <span className="text-stone-400 italic text-[14px]">宮位清平安穩，無飛曜四化</span>
                                     )}
                                   </div>
-                                  <div className="text-xs md:text-[13px] text-[#4A4A4A] leading-relaxed select-text font-serif mt-1.5">
+                                  <div className="text-[15px] md:text-[17px] text-[#4A4A4A] leading-[1.8] select-text font-serif mt-1.5">
                                     {renderFormattedMinorStars(activePalace.name, activePalace.minorStars)}
                                   </div>
                                 </div>
