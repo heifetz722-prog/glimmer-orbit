@@ -3603,9 +3603,9 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
                                 {/* 宜 / 忌 */}
                                 <div className="bg-white border border-[#F1EDE5] p-4 rounded-xl space-y-2">
-                                  <span className="text-xs text-[#52734D] font-bold block border-b border-[#F0EAE1] pb-1">👍 今日最適宜</span>
+                                  <span className="text-[15px] md:text-[16px] text-[#52734D] font-bold block border-b border-[#F0EAE1] pb-1">👍 今日最適宜</span>
                                   {activeDailyFortune.adviceDo.map((item: any, i: number) => (
-                                    <div key={i} className="flex items-start gap-1.5 text-xs text-[#52734D]/90 font-serif">
+                                    <div key={i} className="flex items-start gap-1.5 text-[14px] md:text-[15px] leading-[1.7] text-[#52734D]/90 font-serif">
                                       <span>✦</span>
                                       <span>{item}</span>
                                     </div>
@@ -3613,9 +3613,9 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                 </div>
 
                                 <div className="bg-white border border-[#F1EDE5] p-4 rounded-xl space-y-2">
-                                  <span className="text-xs text-[#A45E4D] font-bold block border-b border-[#F0EAE1] pb-1">⚠️ 今日需避開</span>
+                                  <span className="text-[15px] md:text-[16px] text-[#A45E4D] font-bold block border-b border-[#F0EAE1] pb-1">⚠️ 今日需避開</span>
                                   {activeDailyFortune.adviceDont.map((item: any, i: number) => (
-                                    <div key={i} className="flex items-start gap-1.5 text-xs text-[#A45E4D]/90 font-serif">
+                                    <div key={i} className="flex items-start gap-1.5text-[14px] md:text-[15px] leading-[1.7] text-[#A45E4D]/90 font-serif">
                                       <span>✦</span>
                                       <span>{item}</span>
                                     </div>
@@ -3624,21 +3624,21 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                               </div>
 
                               {/* 搭配 */}
-                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#F6F5EF] p-4 rounded-xl text-xs text-[#706355] font-serif select-text">
+                              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#F6F5EF] p-4 rounded-xl text-[15px] md:text-[16px] text-[#706355] font-serif select-text">
                                 <div className="space-y-0.5">
-                                  <span className="text-[10px] text-[#A19A8F] block">🎨 幸運色系</span>
+                                  <span className="text-[13px] md:text-[14px] text-[#A19A8F] block">🎨 幸運色系</span>
                                   <span className="font-bold text-[#3C352E]">{activeDailyFortune.luckyColor}</span>
                                 </div>
                                 <div className="space-y-0.5">
-                                  <span className="text-[10px] text-[#A19A8F] block">🧭 開運吉方</span>
+                                  <span className="text-[13px] md:text-[14px] text-[#A19A8F] block">🧭 開運吉方</span>
                                   <span className="font-bold text-[#3C352E]">{activeDailyFortune.luckyDirection.split(" · ")[0]}</span>
                                 </div>
                                 <div className="space-y-0.5">
-                                  <span className="text-[10px] text-[#A19A8F] block">🕒 黃金時段</span>
+                                  <span className="text-[13px] md:text-[14px] text-[#A19A8F] block">🕒 黃金時段</span>
                                   <span className="font-bold text-[#3C352E]">{activeDailyFortune.luckyTime.split(" (")[0]}</span>
                                 </div>
                                 <div className="space-y-0.5">
-                                  <span className="text-[10px] text-[#A19A8F] block">🔮 開運數字</span>
+                                  <span className="text-[13px] md:text-[14px] text-[#A19A8F] block">🔮 開運數字</span>
                                   <span className="font-mono font-bold text-[#3C352E]">{activeDailyFortune.luckyNumber}</span>
                                 </div>
                               </div>
