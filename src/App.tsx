@@ -3285,7 +3285,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                     <span>✨</span>
                                     <span>本宮主曜天賦解析</span>
                                   </p>
-                                  <div className="text-xs md:text-[13px] text-[#333333] select-text font-serif leading-relaxed">
+                                 <div className="text-[16px] md:text-[18px] text-[#333333] select-text font-serif leading-[1.8]">
                                     {activePalace.majorStars.length > 0 && activePalace.majorStars[0] !== "無主星" ? (
                                       <>
                                         此宮位星宿能量「{activePalace.majorStars.join("、")}」在此相疊照臨。
@@ -3300,7 +3300,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                 </div>
 
                                 <div className="border-t border-[#FAF8F5] pt-3">
-                                  <p className="font-bold text-[#3C352E] flex items-center gap-1 pb-1 border-b border-[#F7F5F0] text-[11.5px]">
+                                  <p className="font-bold text-[#3C352E] flex items-center gap-1 pb-1 border-b border-[#F7F5F0]text-[15px] md:text-[17px]">
                                     <span>🔮</span>
                                     <span>輔曜吉凶四化診斷</span>
                                   </p>
@@ -3314,7 +3314,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                           badgeTheme = "bg-[#F0FAF4] border-[#B2E6C3] text-[#22C55E]";
                                         }
                                         return (
-                                          <span key={s} className={`px-1.5 py-0.1 rounded border font-medium text-[8px] font-sans ${badgeTheme}`}>
+                                          <span key={s} className={`px-1.5 py-0.1 rounded border font-medium text-[12px] font-sans ${badgeTheme}`}>
                                             {s}
                                           </span>
                                         );
