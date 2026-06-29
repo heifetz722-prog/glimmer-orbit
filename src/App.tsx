@@ -3263,14 +3263,14 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                   </svg>
                                   <div className="absolute text-center leading-none">
                                     <span className="text-lg font-mono font-black text-[#3C352E]">{luShuaiDetails.pct}%</span>
-                                    <span className="text-[7px] font-bold text-stone-400 block tracking-tight uppercase mt-0.5">VITALITY</span>
+                                    <span className="text-[10px] font-bold text-stone-400 block tracking-tight uppercase mt-0.5">VITALITY</span>
                                   </div>
                                 </div>
                                 <div className="space-y-1 font-serif">
-                                  <h5 className={`text-xs font-bold leading-tight ${luShuaiDetails.color}`}>
+                                  <h5 className={`text-[15px] font-bold leading-tight ${luShuaiDetails.color}`}>
                                     {luShuaiDetails.text}
                                   </h5>
-                                  <p className="text-[10px] text-[#8C8375] leading-normal font-serif">
+                                  <p className="text-[14px] text-[#8C8375] leading-normal font-serif">
                                     {luShuaiDetails.desc}
                                   </p>
                                 </div>
