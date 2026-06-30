@@ -3126,13 +3126,19 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
     <div className="flex justify-between items-start w-full leading-none">
      <span className="text-[11px] md:text-[13px] text-[#8C8375] font-mono font-bold opacity-90">
       {(() => {
-        // 終極保險寫法：多管齊下抓取資料來源，確保絕對抓得到
-        const sourcePalaces = (result as any).palaces || (result as any).iztroData?.palaces || [];
-        const rawData = sourcePalaces.find((item: any) => item.name === p.name) || p;
-        const range = rawData?.decadal?.range;
+        // 1. 翻找所有可能的資料庫來源
+        const sourceData = (result as any).iztroData?.palaces || (result as any).palaces || [];
+        const rawData = sourceData.find((item: any) => item.name === p.name) || p;
         
-        // 轉成跟電腦版一模一樣的格式：例如 "15-24 歲"
-        return Array.isArray(range) && range.length === 2 ? `${range[0]}-${range[1]} 歲` : "";
+        // 2. 翻找所有可能叫「年齡」的變數名稱
+        const range = rawData?.decadal?.range || rawData?.ages || p?.decadal?.range || (p as any)?.ages;
+        
+        // 3. 翻譯成畫面文字
+        if (Array.isArray(range) && range.length >= 2) return `${range[0]}-${range[1]} 歲`;
+        if (typeof range === "string" || typeof range === "number") return `${range} 歲`;
+        
+        // 4. 如果真的找不到，顯示「👀找無」讓我們抓蟲！
+        return "👀找無";
       })()}
     </span>
      
