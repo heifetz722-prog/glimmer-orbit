@@ -3975,26 +3975,26 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                   <div className="bg-[#FAF9F5] border-2 border-[#EADFC9] p-6 md:p-8 rounded-3xl flex flex-col justify-between text-left space-y-5 shadow-sm">
                                     <div className="space-y-3.5">
                                       <div className="flex items-center gap-2">
-                                        <span className="p-1 px-3 text-[10px] bg-[#D1E6CE] text-[#1E4D1A] rounded-md font-extrabold font-serif">💰 避險精算</span>
-                                        <h5 className="text-sm font-extrabold text-[#2E241B] font-serif">投資破財避險精算</h5>
+                                        <span className="p-1 px-3 text-[12px] md:text-[13px] bg-[#D1E6CE] text-[#1E4D1A] rounded-md font-extrabold font-serif">💰 避險精算</span>
+                                        <h5 className="text-[16px] md:text-[18px] font-extrabold text-[#2E241B] font-serif">投資破財避險精算</h5>
                                       </div>
-                                      <p className="text-[11.5px] text-stone-700 font-medium leading-relaxed font-serif">
+                                      <p className="text-[14px] md:text-[15px] text-stone-700 font-medium leading-relaxed font-serif">
                                         診斷「財帛宮」流月相，推算該項重大支出的安全係數與高危破財月。
                                       </p>
 
                                       <div className="space-y-3 pt-1">
                                         <div>
-                                          <label className="text-[10px] text-stone-800 font-bold block mb-1.5">預計投資/買房項目</label>
+                                          <label className="text-[13px] md:text-[14px] text-stone-800 font-bold block mb-1.5">預計投資/買房項目</label>
                                           <input
                                             type="text"
                                             placeholder="例：首購二房預售屋 / 台股科技ETF"
                                             value={decisionWealthProject}
                                             onChange={(e) => setDecisionWealthProject(e.target.value)}
-                                            className="w-full bg-white border border-[#D5C7B1] rounded-lg px-3 py-2 text-[11.5px] text-[#2E241B] outline-none placeholder:text-stone-400 focus:border-[#52734D] focus:ring-1 focus:ring-[#52734D] h-[36px]"
+                                            className="w-full bg-white border border-[#D5C7B1] rounded-lg px-3 py-2 text-[14px] md:text-[15px] text-[#2E241B] outline-none placeholder:text-stone-400 focus:border-[#52734D] focus:ring-1 focus:ring-[#52734D] h-[36px]"
                                           />
                                         </div>
                                         <div>
-                                          <label className="text-[10px] text-stone-800 font-bold block mb-1.5">預估資金壓力情況</label>
+                                          <label className="text-[13px] md:text-[14px] text-stone-800 font-bold block mb-1.5">預估資金壓力情況</label>
                                           <div className="grid grid-cols-3 gap-1.5">
                                             {[
                                               { id: "low", lbl: "微小投資" },
@@ -4005,7 +4005,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                                 key={pres.id}
                                                 type="button"
                                                 onClick={() => setDecisionWealthBudget(pres.id)}
-                                                className={`py-1.5 rounded-lg text-[10px] font-bold transition-all border cursor-pointer ${
+                                                className={`py-1.5 rounded-lg text-[14px] md:text-[15px] font-bold transition-all border cursor-pointer ${
                                                   decisionWealthBudget === pres.id
                                                     ? "bg-[#52734D] border-[#52734D] text-white shadow-2xs"
                                                     : "bg-white border-stone-300 text-stone-700 hover:bg-stone-50 hover:text-stone-900"
