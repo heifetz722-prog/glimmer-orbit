@@ -3124,23 +3124,9 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
   >
     {/* 1. 最上層：大限年紀 (左) 與 地支 (右) */}
     <div className="flex justify-between items-start w-full leading-none">
-     <span className="text-[11px] md:text-[13px] text-[#8C8375] font-mono font-bold opacity-90">
-      {(() => {
-        // 1. 翻找所有可能的資料庫來源
-        const sourceData = (result as any).iztroData?.palaces || (result as any).palaces || [];
-        const rawData = sourceData.find((item: any) => item.name === p.name) || p;
-        
-        // 2. 翻找所有可能叫「年齡」的變數名稱
-        const range = rawData?.decadal?.range || rawData?.ages || p?.decadal?.range || (p as any)?.ages;
-        
-        // 3. 翻譯成畫面文字
-        if (Array.isArray(range) && range.length >= 2) return `${range[0]}-${range[1]} 歲`;
-        if (typeof range === "string" || typeof range === "number") return `${range} 歲`;
-        
-        // 4. 如果真的找不到，顯示「👀找無」讓我們抓蟲！
-        return "👀找無";
-      })()}
-    </span>
+    <span className="text-[10px] text-red-500 font-mono font-bold leading-tight break-all">
+  {Object.keys(p).join(", ")}
+</span>
      
       <span className="text-[9px] font-sans text-stone-400">
         {p.zhi}宮
