@@ -3886,31 +3886,31 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                   <div className="bg-[#FAF9F5] border-2 border-[#EADFC9] p-6 md:p-8 rounded-3xl flex flex-col justify-between text-left space-y-5 shadow-sm">
                                     <div className="space-y-3.5">
                                       <div className="flex items-center gap-2">
-                                        <span className="p-1 px-3 text-[10px] bg-[#FADBD0] text-[#7E2514] rounded-md font-extrabold font-serif">💕 緣分雷達</span>
-                                        <h5 className="text-sm font-extrabold text-[#2E241B] font-serif">紫微命盤雙星合盤</h5>
+                                        <span className="p-1 px-3 text-[12px] md:text-[13px] bg-[#FADBD0] text-[#7E2514] rounded-md font-extrabold font-serif">💕 緣分雷達</span>
+                                        <h5 className="text-[16px] md:text-[18px] font-extrabold text-[#2E241B] font-serif">紫微命盤雙星合盤</h5>
                                       </div>
-                                      <p className="text-[11.5px] text-stone-700 font-medium leading-relaxed font-serif">
+                                      <p className="text-[14px] md:text-[15px] text-stone-700 font-medium leading-relaxed font-serif">
                                         輸入對方的出生日期與時辰，智慧比對雙方的紫微命盤，分析彼此在「性格互補」與「溝通盲點」上的互動趨勢，並建議最佳避險開運模式。
                                       </p>
 
                                       <div className="space-y-3 pt-1">
                                         <div className="grid grid-cols-2 gap-2.5">
                                           <div>
-                                            <label className="text-[10px] text-stone-800 font-bold block mb-1.5">對方姓名/稱呼</label>
+                                            <label className="text-[13px] md:text-[14px] text-stone-800 font-bold block mb-1.5">對方姓名/稱呼</label>
                                             <input
                                               type="text"
                                               placeholder="例：小張"
                                               value={decisionLovePartner}
                                               onChange={(e) => setDecisionLovePartner(e.target.value)}
-                                              className="w-full bg-white border border-[#D5C7B1] rounded-lg px-3 py-2 text-[11.5px] text-[#2E241B] outline-none placeholder:text-stone-400 focus:border-[#A45E4D] focus:ring-1 focus:ring-[#A45E4D] h-[36px]"
+                                              className="w-full bg-white border border-[#D5C7B1] rounded-lg px-3 py-2 text-[14px] md:text-[15px] text-[#2E241B] outline-none placeholder:text-stone-400 focus:border-[#A45E4D] focus:ring-1 focus:ring-[#A45E4D] h-[36px]"
                                             />
                                           </div>
                                           <div>
-                                            <label className="text-[10px] text-stone-800 font-bold block mb-1.5">關係狀態</label>
+                                            <label className="text-[13px] md:text-[14px] text-stone-800 font-bold block mb-1.5">關係狀態</label>
                                             <select
                                               value={decisionLoveRole}
                                               onChange={(e) => setDecisionLoveRole(e.target.value)}
-                                              className="w-full bg-white border border-[#D5C7B1] rounded-lg px-2.5 py-1.5 text-[11px] text-[#2E241B] outline-none h-[36px]"
+                                              className="w-full bg-white border border-[#D5C7B1] rounded-lg px-2.5 py-1.5 text-[14px] md:text-[15px] text-[#2E241B] outline-none h-[36px]"
                                             >
                                               <option value="曖昧對象">曖昧對象</option>
                                               <option value="穩定情侶關係">穩定情侶關係</option>
