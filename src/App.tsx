@@ -3153,7 +3153,7 @@ const groupEndAge = groupStartAge + 9;
       }`}>
         {p.name}
       </span>
-      <span className="text-[10px] font-serif font-bold text-[#5C4D3C] mt-0.5 tracking-widest truncate w-full">
+      <span className="text-[10px] md:text-[14px] font-serif font-bold text-[#5C4D3C] mt-0.5 tracking-widest truncate w-full">
         {{
           "命宮": "核心性格與人生",
           "兄弟": "人際互動與平輩",
