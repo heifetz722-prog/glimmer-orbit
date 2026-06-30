@@ -3124,16 +3124,18 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
   >
     {/* 1. 最上層：大限年紀 (左) 與 地支 (右) */}
     <div className="flex justify-between items-start w-full leading-none">
-      <span className="text-[12px] md:text-[13px] text-[#8C8375] font-mono font-semibold opacity-90">
+     <span className="text-[11px] md:text-[13px] text-[#8C8375] font-mono font-bold opacity-90">
       {(() => {
-        // 1. 抓出原始的 iztro 資料
-        const rawPalaces = (result as any).iztroData?.palaces;
-        // 2. 在原始資料中找到當前宮位對應的資訊
-        const rawData = rawPalaces?.find((pitem: any) => pitem.name === p.name);
-        // 3. 把陣列 [14, 23] 轉成字串 "14 - 23" 完美顯示
-        return rawData?.decadal?.range ? rawData.decadal.range.join(" - ") : "";
+        // 終極保險寫法：多管齊下抓取資料來源，確保絕對抓得到
+        const sourcePalaces = (result as any).palaces || (result as any).iztroData?.palaces || [];
+        const rawData = sourcePalaces.find((item: any) => item.name === p.name) || p;
+        const range = rawData?.decadal?.range;
+        
+        // 轉成跟電腦版一模一樣的格式：例如 "15-24 歲"
+        return Array.isArray(range) && range.length === 2 ? `${range[0]}-${range[1]} 歲` : "";
       })()}
-      </span>
+    </span>
+     
       <span className="text-[9px] font-sans text-stone-400">
         {p.zhi}宮
       </span>
