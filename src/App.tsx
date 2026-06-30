@@ -3922,20 +3922,20 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                         </div>
                                         <div className="grid grid-cols-2 gap-2.5">
                                           <div>
-                                            <label className="text-[10px] text-stone-800 font-bold block mb-1.5">對方的生辰日期</label>
+                                            <label className="text-[13px] md:text-[14px] text-stone-800 font-bold block mb-1.5">對方的生辰日期</label>
                                             <input
                                               type="date"
                                               value={decisionLovePartnerBirthDate}
                                               onChange={(e) => setDecisionLovePartnerBirthDate(e.target.value)}
-                                              className="w-full bg-white border border-[#D5C7B1] rounded-lg px-2.5 py-1 text-[11px] text-[#2E241B] outline-none h-[36px]"
+                                              className="w-full bg-white border border-[#D5C7B1] rounded-lg px-2.5 py-1 text-[14px] md:text-[15px] text-[#2E241B] outline-none h-[36px]"
                                             />
                                           </div>
                                           <div>
-                                            <label className="text-[10px] text-stone-800 font-bold block mb-1.5">對方的出生時辰</label>
+                                            <label className="text-[13px] md:text-[14px] text-stone-800 font-bold block mb-1.5">對方的出生時辰</label>
                                             <select
                                               value={decisionLovePartnerBirthHour}
                                               onChange={(e) => setDecisionLovePartnerBirthHour(e.target.value)}
-                                              className="w-full bg-white border border-[#D5C7B1] rounded-lg px-2.5 py-1 text-[11px] text-[#2E241B] outline-none h-[36px]"
+                                              className="w-full bg-white border border-[#D5C7B1] rounded-lg px-2.5 py-1 text-[14px] md:text-[15px] text-[#2E241B] outline-none h-[36px]"
                                             >
                                               <option value="子時 (23:00-01:00)">子時 (23:00-01:00)</option>
                                               <option value="丑時 (01:00-03:00)">丑時 (01:00-03:00)</option>
