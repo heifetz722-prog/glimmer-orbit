@@ -4915,7 +4915,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
               </div>
 
               {/* 第四單元：心靈對話小庵（與人生策略旅伴對話一對一） */}
-              <div id="chapter-4-section" className="bg-white border border-[#EBE3D5]w-full px-2 py-5 md:p-8 shadow-[0_8px_30px_rgba(140,122,107,0.02)] rounded-3xl relative overflow-hidden">
+              <div id="chapter-4-section" className="bg-[#FAF8F5] border border-[#EBE3D5]w-full px-2 py-5 md:p-8 shadow-[0_8px_30px_rgba(140,122,107,0.02)] rounded-3xl relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-[4px] bg-[#8C7A6B]" />
 
                 <div className="flex items-center space-x-2 border-b border-[#EBE3D5] pb-3 mb-4 text-left">
@@ -4934,7 +4934,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                 </p>
 
                 {/* 對話展示框 */}
-                <div className="w-fullbg-[#FAF8F5] rounded-3xl border border-[#EBD6C1]/35 px-2 py-4 md:p-7 md:p-7 h-[480px] overflow-y-auto mb-5 space-y-6 shadow-inner">
+                <div className="w-fullbg-transparent rounded-3xl /35 px-2 py-4 md:p-7 md:p-7 h-[480px] overflow-y-auto mb-5 space-y-6 shadow-inner">
                   
                   {/* 開場 */}
                   <div className="flex items-start space-x-2.5">
