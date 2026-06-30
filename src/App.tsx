@@ -4918,7 +4918,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
               <div id="chapter-4-section" className="bg-[#FAF8F5] border border-[#EBE3D5] w-full px-2 py-5 md:p-8 shadow-[0_8px_30px_rgba(140,122,107,0.02)] rounded-3xl relative overflow-hidden">
                 
                 <div className="flex items-center space-x-2  pb-3 mb-4 text-left">
-                  <MessageSquare className="w-5 h-5 text-[#8C7A6B]" />
+                 
                   <h3 className="font-serif font-medium text-base text-[#5C4D3C] tracking-wider uppercase">
                     第四章 ‧ 爐香暖言 ‧ 微光一對一心靈晤談
                   </h3>
