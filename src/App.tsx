@@ -3826,33 +3826,33 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                                   <div className="bg-[#FAF9F5] border-2 border-[#EADFC9] p-6 md:p-8 rounded-3xl flex flex-col justify-between text-left space-y-5 shadow-sm">
                                     <div className="space-y-3.5">
                                       <div className="flex items-center gap-2">
-                                        <span className="p-1 px-3 text-[10px] bg-[#E8DFD0] text-[#4A3928] rounded-md font-extrabold font-serif">💼 職涯評估</span>
-                                        <h5 className="text-sm font-extrabold text-[#2E241B] font-serif">轉職 / 創業勝率</h5>
+                                        <span className="p-1 px-3 text-[12px] md:text-[13px] bg-[#E8DFD0] text-[#4A3928] rounded-md font-extrabold font-serif">💼 職涯評估</span>
+                                        <h5 className="text-[16px] md:text-[18px] font-extrabold text-[#2E241B] font-serif">轉職 / 創業勝率</h5>
                                       </div>
-                                      <p className="text-[11.5px] text-stone-700 font-medium leading-relaxed font-serif">
+                                      <p className="text-[14px] md:text-[15px] text-stone-700 font-medium leading-relaxed font-serif">
                                         精密比對本命「官祿宮」星曜，預測特定新工作的融入勝率與隱藏小人。
                                       </p>
                                       
                                       <div className="space-y-3 pt-1">
                                         <div>
-                                          <label className="text-[10px] text-stone-800 font-bold block mb-1.5">目標公司的職能/類型</label>
+                                          <label className="text-[13px] md:text-[14px] text-stone-800 font-bold block mb-1.5">目標公司的職能/類型</label>
                                           <input
                                             type="text"
                                             placeholder="例：A公司資深PM / 熱音咖啡廳"
                                             value={decisionCareerRole}
                                             onChange={(e) => setDecisionCareerRole(e.target.value)}
-                                            className="w-full bg-white border border-[#D5C7B1] rounded-lg px-3 py-2 text-[11.5px] text-[#2E241B] outline-none placeholder:text-stone-400 focus:border-[#8C7A6B] focus:ring-1 focus:ring-[#8C7A6B] h-[36px]"
+                                            className="w-full bg-white border border-[#D5C7B1] rounded-lg px-3 py-2 text-[14px] md:text-[15px] text-[#2E241B] outline-none placeholder:text-stone-400 focus:border-[#8C7A6B] focus:ring-1 focus:ring-[#8C7A6B] h-[36px]"
                                           />
                                         </div>
                                         <div>
-                                          <label className="text-[10px] text-stone-800 font-bold block mb-1.5">決策路徑類型</label>
+                                          <label className="text-[13px] md:text-[14px] text-stone-800 font-bold block mb-1.5">決策路徑類型</label>
                                           <div className="flex gap-2">
                                             {["careerChange", "startup"].map((type) => (
                                               <button
                                                 key={type}
                                                 type="button"
                                                 onClick={() => setDecisionCareerType(type as any)}
-                                                className={`flex-1 py-1.5 rounded-lg text-[10.5px] font-bold transition-all border cursor-pointer ${
+                                                className={`flex-1 py-1.5 rounded-lg text-[14px] md:text-[15px] font-bold transition-all border cursor-pointer ${
                                                   decisionCareerType === type
                                                     ? "bg-[#8C7A6B] border-[#8C7A6B] text-white font-serif shadow-2xs"
                                                     : "bg-white border-stone-300 text-stone-700 hover:bg-stone-50 hover:text-stone-900"
