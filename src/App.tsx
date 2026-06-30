@@ -3148,7 +3148,7 @@ const groupEndAge = groupStartAge + 9;
 
     {/* 3. 最下層：白話文與宮位名稱 */}
     <div className="flex flex-col items-start w-full border-t border-[#EBE3D5]/50 pt-1 mt-0.5 text-left leading-none">
-      <span className={`text-[8px] opacity-70 font-serif ${
+      <span className={`text-[8px] md:text-[11px]opacity-70 font-serif ${
         p.name === "命宮" ? "text-[#8C7A6B]" : "text-[#736B5E]"
       }`}>
         {p.name}
