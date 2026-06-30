@@ -4916,8 +4916,7 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
 
               {/* 第四單元：心靈對話小庵（與人生策略旅伴對話一對一） */}
               <div id="chapter-4-section" className="bg-[#FAF8F5] border border-[#EBE3D5]w-full px-2 py-5 md:p-8 shadow-[0_8px_30px_rgba(140,122,107,0.02)] rounded-3xl relative overflow-hidden">
-                bg-transparent<div className="absolute top-0 left-0 w-full h-[4px] bg-[#8C7A6B]" />
-
+                
                 <div className="flex items-center space-x-2  pb-3 mb-4 text-left">
                   <MessageSquare className="w-5 h-5 text-[#8C7A6B]" />
                   <h3 className="font-serif font-medium text-base text-[#5C4D3C] tracking-wider uppercase">
