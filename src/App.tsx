@@ -3108,6 +3108,10 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
                     /* 全宮位星曜緊湊網格檢視，對應 12 地支盤 */
                     <div className="grid grid-cols-3 gap-2 pb-1 text-left">
                       {result.ziweiPalaces.map((p) => {
+                        const zhiIndex = ["寅", "卯", "辰", "巳", "午", "未", "申", "酉", "戌", "亥", "子", "丑"].indexOf(p.zhi);
+const normalizedIndex = zhiIndex >= 0 ? zhiIndex : 0;
+const groupStartAge = 5 + normalizedIndex * 10;
+const groupEndAge = groupStartAge + 9;
                         const isSelected = activePalace?.name === p.name;
                         const hasHuaJi = p.minorStars ? p.minorStars.some(s => s.includes("化忌")) : false;
                         const hasHuaLu = p.minorStars ? p.minorStars.some(s => s.includes("化祿")) : false;
@@ -3124,8 +3128,8 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
   >
     {/* 1. 最上層：大限年紀 (左) 與 地支 (右) */}
     <div className="flex justify-between items-start w-full leading-none">
-   <span className="text-[11px] text-blue-600 font-mono font-bold leading-tight break-all">
-  {Object.keys(result || {}).join(", ")}
+  <span className="text-[11px] md:text-[13px] text-[#8C8375] font-mono font-bold opacity-90">
+  {groupStartAge}-{groupEndAge} 歲
 </span>
      
       <span className="text-[9px] font-sans text-stone-400">
