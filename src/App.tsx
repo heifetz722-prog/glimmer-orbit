@@ -3124,8 +3124,8 @@ const currentAge = new Date().getFullYear() - parseInt(result.personalInfo.solar
   >
     {/* 1. 最上層：大限年紀 (左) 與 地支 (右) */}
     <div className="flex justify-between items-start w-full leading-none">
-    <span className="text-[10px] text-red-500 font-mono font-bold leading-tight break-all">
-  {Object.keys(p).join(", ")}
+   <span className="text-[11px] text-blue-600 font-mono font-bold leading-tight break-all">
+  {Object.keys(result || {}).join(", ")}
 </span>
      
       <span className="text-[9px] font-sans text-stone-400">
